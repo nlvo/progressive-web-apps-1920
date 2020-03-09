@@ -1,0 +1,312 @@
+@font-face {
+	font-family: 'ionicons';
+	src: url('../fonts/icomoon.ttf')
+}
+
+:root {
+	--grey-000: #FFFFFF;
+	--grey-100: #EEEFF0;
+	--grey-200: #D4D7D9;
+	--grey-300: #BABFC3;
+	--grey-400: #868E95;
+	--grey-500: #525E68;
+	--grey-600: #4A555E;
+	--grey-700: #31383E;
+	--grey-800: #252A2F;
+	--grey-900: #151515;
+
+	--marvel-100: #FDE9EA;
+	--marvel-200: #F9C8CA;
+	--marvel-300: #F5A7A9;
+	--marvel-400: #EE6669;
+	--marvel-500: #E62429;
+	--marvel-600: #CF2025;
+	--marvel-700: #8A1619;
+	--marvel-800: #681012;
+	--marvel-900: #450B0C;
+}
+
+body {
+	background-color: var(--grey-000);
+	font-family: 'Open Sans';
+	font-size: 1em;
+	color: var(--grey-900);
+	margin: 0;
+}
+
+ul {
+	padding: 0;
+}
+
+.container {
+	display: flex;
+}
+
+header {
+	border: 1px solid var(--grey-100);
+	padding: .25em 2em;
+}
+
+header img {
+	box-shadow: none;
+	padding-right: 1em;
+	width: 3em;
+}
+
+aside {
+	border-right: 1px solid var(--grey-100);
+	padding: 2em;
+}
+
+header nav ul{
+	display: flex;
+}
+
+header nav ul li:first-child {
+	display: flex;
+	flex: 1;
+	width: 12em;
+}
+
+header nav ul li {
+	align-self: center;
+	flex: 2;
+	padding-right: 1em;
+	list-style-type: none;
+}
+
+header nav ul:after {
+	content: '';
+	flex: 1;
+}
+
+header nav ul li input {
+	background-color: var(--grey-100);
+	border: 0;
+	border-radius: 10em;
+	/* border-bottom: 1px solid var(--grey-200); */
+	font-size: 1em;
+	padding: .625em 2em;
+	margin: 0 2em;
+	width: 28em;
+}
+
+header nav ul li input:focus {
+	outline: var(--marvel-400);
+}
+header nav ul li button {
+	border: 0;
+	background-color: var(--marvel-500);
+	border-radius: 10em;
+	color: var(--grey-000);
+	cursor: pointer;
+	font-size: 1em;
+	padding: .625em 3em;
+	transition: background-color .5s ease-in-out;
+}
+
+header nav ul li button:hover {
+	background-color: var(--marvel-700);
+}
+
+ul {
+	margin: 0;
+}
+
+aside {
+	flex: 1;
+}
+
+aside nav {
+	height: 100%;
+}
+
+aside ul li:first-of-type {
+	color: var(--grey-400);
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 0.75em;
+	width: 18em;
+}
+
+aside ul li {
+	padding-top: 1em;
+}
+
+aside ul:last-of-type li:first-of-type {
+	padding-top: 3.75em;
+}
+
+aside nav ul li a {
+	color: var(--grey-300);
+	display: inline-flex;
+}
+
+aside nav ul li a:before {
+	align-items: center;
+	display: inline-flex;
+	font-family: 'ionicons';
+	padding-right: .625em;
+}
+
+aside nav ul li a.active {
+	color: var(--grey-900);
+}
+
+aside nav ul:first-child li:nth-of-type(2) a:before {
+	content: '\e906';
+}
+
+aside nav ul:first-child li:nth-of-type(3) a:before {
+	content: '\e905';
+}
+
+aside nav ul:nth-of-type(2) li:nth-of-type(2) a:before {
+	content: '\e901';
+}
+
+aside nav ul:nth-of-type(2) li:nth-of-type(3) a:before {
+	content: '\e903';
+}
+
+aside nav ul:nth-of-type(2) li:nth-of-type(4) a:before {
+	content: '\e904';
+}
+
+aside nav ul:nth-of-type(2) li:nth-of-type(5) a:before {
+	content: '\e900';
+}
+
+aside nav ul:nth-of-type(2) li:nth-of-type(6) a:before {
+	content: '\e902';
+}
+
+aside footer {
+	color: var(--grey-400);
+}
+
+.content {
+	flex: 6;
+	position: relative;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	color: var(--grey-900);
+	text-decoration: none;
+	transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+	color: var(--marvel-500);
+}
+
+h2 {
+	font-size: 1em;
+}
+
+#loader:empty:before {
+	animation: loading 1s infinite;
+	content: url('../img/Captain_America_Shield.svg');
+	display: flex;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	margin: 0 auto;
+	height: 8em;
+	width: 8em;
+}
+
+.comics.loader:empty::after {
+	content:'loading..';
+	display: flex;
+	position: absolute;
+	top: 60%;
+	left: 52.5%;
+}
+
+section {
+	/* background-color: var(--grey-100); */
+	flex: 2;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	padding: 2em 0;
+}
+
+section header {
+	flex: 0 0 100%;
+}
+
+.characters {
+	background-color: var(--grey-100);
+	justify-content: space-evenly;
+}
+
+.characters img {
+	border-radius: 10em;
+	height: 8em;
+	width: 8em;
+}
+
+.characters article {
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	margin: 1em 0;
+	position: relative;
+	z-index: 1;
+	padding: 1em;
+}
+
+.characters article:after {
+	background-color: var(--grey-000);
+	bottom: 0;
+	border-radius: 0.125em;
+	border: 1px solid var(--grey-200);
+	content: '';
+	display: block;
+    height: 60%;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+}
+
+.characters article h2 {
+	text-align: center;
+}
+
+.characters article p {
+	color: var(--grey-400);
+	margin: 0;
+}
+
+article {
+	padding: 0 1em;
+	transition: all 0.5s ease-in-out;
+	width: 14em;
+}
+
+article img {
+	position: relative;
+	border-radius: 0.15em;
+	box-shadow: 0 4px 8px -1px rgba(0,0,0,.4),0 2px 4px -1px rgba(0,0,0,.09);
+  transition: all 0.5s ease-in-out;
+  object-fit: cover;
+	/* height: 14em; */
+	width: 14em;
+}
+
+.comics article img:hover {
+	transform: scale(1.1);
+	box-shadow: 0 4px 80px 9px rgba(0,0,0,.15),0 2px 16px 11px rgba(0,0,0,.2);
+}
+
+@keyframes loading{
+	to {
+		transform: rotate(360deg);
+	}
+}

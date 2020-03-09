@@ -1,0 +1,12 @@
+<section>
+    <article>
+        <img src="<%= comic.thumbnail %>">
+        <a href="<%= comic.id %>"><h2><%= comic.title %></h2></a>
+        
+        <ul>
+            <% for(creator of comic.creators)  { %>
+                <li><%= creator.role %> <%= creator.name %></li>
+            <% } %>
+        </ul>
+    </article>
+</section>
