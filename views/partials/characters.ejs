@@ -1,0 +1,8 @@
+<section class="characters">
+    <% characters.forEach(character => { %>
+        <article>
+            <img src="<%= character.thumbnail %>">
+            <a href="<%= /characters/ + character.id %>"><h2><%= character.title %></h2></a>
+        </article>
+    <%})%>
+</section>

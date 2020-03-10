@@ -4,7 +4,13 @@
     <%- include ("partials/header.ejs") %>
     <div class="container">
         <%- include ("partials/nav.ejs") %>
-        <%- include ("partials/comics.ejs") %>
+        <section>
+            <h2>Recent comics</h2>
+            <%- include ("partials/comics.ejs") %>
+
+            <h2>Recent characters</h2>
+            <%- include ("partials/characters.ejs") %>
+        </section>
     </div>
 </main>
 

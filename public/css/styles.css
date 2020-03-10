@@ -226,19 +226,34 @@ aside footer {
 	width: 8em;
 }
 
-section {
+div > section {
 	/* background-color: var(--grey-100); */
 	flex: 6;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
-	padding: 2em 0;
+	justify-content: space-between;
+	padding: 2em;
+}
+
+section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	/* padding: 2em 0; */
+	width: 100%;
 }
 
 section header {
 	flex: 0 0 100%;
 }
 
+section h2 {
+	width: 100%;
+}
+
+article:first-child {
+	padding-left: 0;
+}
 article {
 	padding: 0 1em;
 	transition: all 0.5s ease-in-out;
@@ -257,8 +272,8 @@ article img {
 	box-shadow: 0 4px 8px -1px rgba(0, 0, 0, .4), 0 2px 4px -1px rgba(0, 0, 0, .09);
 	transition: all 0.5s ease-in-out;
 	object-fit: cover;
-	/* height: 14em; */
-	width: 14em;
+	height: 21em;
+    width: 14em;
 }
 
 /* ---------------------------------------------
