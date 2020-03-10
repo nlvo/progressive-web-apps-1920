@@ -1,11 +1,23 @@
 <section class="comic">
-    <article>
+    <header>
         <img src="<%= comic.thumbnail %>">
-        <h2><%= comic.title %></h2>
-        <ul>
-            <% for(creator of comic.creators)  { %>
-                <li><span><%= creator.role %></span><%= creator.name %></li>
-            <% } %>
-        </ul>
-    </article>
+        <div>
+            <h2><%= comic.name %></h2>
+            <p><% comic %></p>
+            <ul>
+                <% for(creator of comic.creators)  { %>
+                    <li><span><%= creator.role %></span><%= creator.name %></li>
+                <% } %>
+            </ul>
+        </div>
+    </header>
+
+        <% characters.forEach(character => { %>
+            <article>
+                <h3><%= character.name %></h3>
+                <img src="<%= character.thumbnail %>">
+                <p><%= character.description %></p>
+            </article>
+        <% }) %>
+
 </section>

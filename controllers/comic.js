@@ -1,7 +1,6 @@
 const fetch = require('node-fetch');
 
 function clean (oldData) {
-    // console.log(oldData);
 
     let newData = oldData.data.results;
     
@@ -11,12 +10,13 @@ function clean (oldData) {
         const thumbnail = data.thumbnail.path.includes('image_not_available') ? 'img/not-found' : data.thumbnail.path;
         return {
             id : data.id,
-            title: data.name || data.title,
+            name: data.name || data.title,
             thumbnail: thumbnail + '.' + data.thumbnail.extension,
             comicsAvailabe: data.comics ? data.comics.available : data.description,
             creators: creators,
             // characters: data.characters,
-            stories: data.stories
+            stories: data.stories,
+            description: data.description
         }
     });
 
@@ -25,7 +25,7 @@ function clean (oldData) {
 }
 
 function createComicsEndpoint () {
-    const comicsEndpoint = createEndpoint('comics', 'dateDescriptor=thisMonth&orderBy=onsaleDate&limit=10');
+    const comicsEndpoint = createEndpoint('comics', 'dateDescriptor=thisMonth&orderBy=-onsaleDate&limit=20');
     return comicsEndpoint;
 }
 
@@ -49,8 +49,11 @@ async function fetchData (url) {
 
 // Get data for the detail page and render
 async function showComic (req, res) {
-    const comic = await getComic(req.params.id);
-    res.render('detail.ejs', { comic })
+    const id = req.params.id;
+    const comic = await getComic(id);
+    const comicCharacters = await getComicCharacters(id);
+    console.log(comicCharacters)
+    res.render('detail.ejs', { comic, characters: comicCharacters })
 }
 
 // fetch data and find the correct comic with id
@@ -60,6 +63,19 @@ async function getComic (id) {
     const findData = comics.find((data) => data.id == id);
     return findData;
     // https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d
+}
+
+// fetch data and find the correct comic with id
+async function getComicCharacters (id) {
+    const charactersEndpoint = createCharactersEndpoint(id);
+    const comicsCharacters = await fetchData(charactersEndpoint);
+    return comicsCharacters;
+    // https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d
+}
+
+function createCharactersEndpoint (id) {
+    const charactersEndpoint = createEndpoint(`comics/${id}/characters`, '');
+    return charactersEndpoint;
 }
 
 module.exports = showComic;

@@ -61,12 +61,12 @@ h2 {
  *	header | searchbar
  * ----------------------------------------------- */
 
-header {
+main > header {
 	border: 1px solid var(--grey-100);
 	padding: .25em 2em;
 }
 
-header img {
+main > header img {
 	box-shadow: none;
 	padding-right: 1em;
 	width: 3em;
