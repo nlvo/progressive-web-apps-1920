@@ -52,7 +52,6 @@ async function showComic (req, res) {
     const id = req.params.id;
     const comic = await getComic(id);
     const comicCharacters = await getComicCharacters(id);
-    console.log(comicCharacters)
     res.render('detail.ejs', { comic, characters: comicCharacters })
 }
 

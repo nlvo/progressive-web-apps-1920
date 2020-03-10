@@ -2,7 +2,7 @@
     <% comics.forEach(comic => { %>
         <article>
             <img src="<%= comic.thumbnail %>">
-            <a href="<%= comic.id %>"><h2><%= comic.title %></h2></a>
+            <a href="<%= /comics/ + comic.id %>"><h2><%= comic.title %></h2></a>
         </article>
     <%})%>
 </section>
