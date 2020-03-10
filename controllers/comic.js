@@ -15,8 +15,8 @@ function clean (oldData) {
             thumbnail: thumbnail + '.' + data.thumbnail.extension,
             comicsAvailabe: data.comics ? data.comics.available : data.description,
             creators: creators,
-            // characters: characters,
-            // stories: stories
+            // characters: data.characters,
+            stories: data.stories
         }
     });
 

@@ -1,11 +1,10 @@
-<section>
+<section class="comic">
     <article>
         <img src="<%= comic.thumbnail %>">
-        <a href="<%= comic.id %>"><h2><%= comic.title %></h2></a>
-        
+        <h2><%= comic.title %></h2>
         <ul>
             <% for(creator of comic.creators)  { %>
-                <li><%= creator.role %> <%= creator.name %></li>
+                <li><span><%= creator.role %></span><%= creator.name %></li>
             <% } %>
         </ul>
     </article>

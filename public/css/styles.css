@@ -36,11 +36,30 @@ body {
 
 ul {
 	padding: 0;
+	margin: 0;
 }
 
-.container {
-	display: flex;
+li {
+	list-style-type: none;
 }
+
+a {
+	color: var(--grey-900);
+	text-decoration: none;
+	transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+	color: var(--marvel-500);
+}
+
+h2 {
+	font-size: 1em;
+}
+
+/* ---------------------------------------------
+ *	header | searchbar
+ * ----------------------------------------------- */
 
 header {
 	border: 1px solid var(--grey-100);
@@ -53,12 +72,7 @@ header img {
 	width: 3em;
 }
 
-aside {
-	border-right: 1px solid var(--grey-100);
-	padding: 2em;
-}
-
-header nav ul{
+header nav ul {
 	display: flex;
 }
 
@@ -94,6 +108,7 @@ header nav ul li input {
 header nav ul li input:focus {
 	outline: var(--marvel-400);
 }
+
 header nav ul li button {
 	border: 0;
 	background-color: var(--marvel-500);
@@ -109,11 +124,21 @@ header nav ul li button:hover {
 	background-color: var(--marvel-700);
 }
 
-ul {
-	margin: 0;
+/* ---------------------------------------------
+ *	container
+ * ----------------------------------------------- */
+
+.container {
+	display: flex;
 }
 
+ /* ---------------------------------------------
+ *	sidebar | navigation
+ * ----------------------------------------------- */
+
 aside {
+	border-right: 1px solid var(--grey-100);
+	padding: 2em;
 	flex: 1;
 }
 
@@ -185,28 +210,9 @@ aside footer {
 	color: var(--grey-400);
 }
 
-.content {
-	flex: 6;
-	position: relative;
-}
-
-li {
-	list-style-type: none;
-}
-
-a {
-	color: var(--grey-900);
-	text-decoration: none;
-	transition: color 0.2s ease-in-out;
-}
-
-a:hover {
-	color: var(--marvel-500);
-}
-
-h2 {
-	font-size: 1em;
-}
+/* ---------------------------------------------
+ *	mess | need to clean/put where it belongs
+ * ----------------------------------------------- */
 
 #loader:empty:before {
 	animation: loading 1s infinite;
@@ -220,17 +226,9 @@ h2 {
 	width: 8em;
 }
 
-.comics.loader:empty::after {
-	content:'loading..';
-	display: flex;
-	position: absolute;
-	top: 60%;
-	left: 52.5%;
-}
-
 section {
 	/* background-color: var(--grey-100); */
-	flex: 2;
+	flex: 6;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
@@ -240,6 +238,49 @@ section {
 section header {
 	flex: 0 0 100%;
 }
+
+article {
+	padding: 0 1em;
+	transition: all 0.5s ease-in-out;
+	width: 14em;
+}
+
+article span {
+	color: var(--grey-400);
+	margin-right: .625em;
+	text-transform: capitalize;
+}
+
+article img {
+	position: relative;
+	border-radius: 0.15em;
+	box-shadow: 0 4px 8px -1px rgba(0, 0, 0, .4), 0 2px 4px -1px rgba(0, 0, 0, .09);
+	transition: all 0.5s ease-in-out;
+	object-fit: cover;
+	/* height: 14em; */
+	width: 14em;
+}
+
+/* ---------------------------------------------
+ *	comics | overview
+ * ----------------------------------------------- */
+
+ .comics article img:hover {
+	transform: scale(1.1);
+	box-shadow: 0 4px 80px 9px rgba(0, 0, 0, .15), 0 2px 16px 11px rgba(0, 0, 0, .2);
+}
+
+.comics.loader:empty::after {
+	content: 'loading..';
+	display: flex;
+	position: absolute;
+	top: 60%;
+	left: 52.5%;
+}
+
+ /* ---------------------------------------------
+ *	characters | overview
+ * ----------------------------------------------- */
 
 .characters {
 	background-color: var(--grey-100);
@@ -254,7 +295,7 @@ section header {
 
 .characters article {
 	display: flex;
-    flex-direction: column;
+	flex-direction: column;
 	align-items: center;
 	margin: 1em 0;
 	position: relative;
@@ -269,7 +310,7 @@ section header {
 	border: 1px solid var(--grey-200);
 	content: '';
 	display: block;
-    height: 60%;
+	height: 60%;
 	position: absolute;
 	width: 100%;
 	z-index: -1;
@@ -284,28 +325,15 @@ section header {
 	margin: 0;
 }
 
-article {
-	padding: 0 1em;
-	transition: all 0.5s ease-in-out;
-	width: 14em;
+/* ---------------------------------------------
+ *	comic | detail
+ * ----------------------------------------------- */
+
+ .comic {
+	justify-content: left;
 }
 
-article img {
-	position: relative;
-	border-radius: 0.15em;
-	box-shadow: 0 4px 8px -1px rgba(0,0,0,.4),0 2px 4px -1px rgba(0,0,0,.09);
-  transition: all 0.5s ease-in-out;
-  object-fit: cover;
-	/* height: 14em; */
-	width: 14em;
-}
-
-.comics article img:hover {
-	transform: scale(1.1);
-	box-shadow: 0 4px 80px 9px rgba(0,0,0,.15),0 2px 16px 11px rgba(0,0,0,.2);
-}
-
-@keyframes loading{
+@keyframes loading {
 	to {
 		transform: rotate(360deg);
 	}
