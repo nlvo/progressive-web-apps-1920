@@ -12,7 +12,7 @@ function clean (oldData) {
             id : data.id,
             title: data.name || data.title,
             thumbnail: thumbnail + '.' + data.thumbnail.extension,
-            comicsAvailabe: data.comics ? data.comics.available : data.description,
+            comicsAvailable: data.comics ? data.comics.available : data.description,
             creators: creators,
             // characters: characters,
             // stories: stories

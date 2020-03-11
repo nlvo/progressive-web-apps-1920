@@ -1,0 +1,16 @@
+ {{#if characters}}
+ <section class="characters">
+    <h2>{{ charactersPageTitle }}</h2>
+     {{#each characters as |character|}}
+        {{#> character}}
+        <article>
+            <img src="{{ character.thumbnail }}">
+            <a href="/characters/{{ character.id }}">
+                <h2>{{ character.title }}</h2>
+            </a>
+            <p>comics ({{character.comicsAvailable}})</p>
+        </article>
+        {{/character}}
+     {{/each}}
+ </section>
+{{/if}}

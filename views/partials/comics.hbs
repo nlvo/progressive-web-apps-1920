@@ -1,0 +1,15 @@
+{{#if comics }}
+    <section class="comics">
+        <h2>{{ comicsPageTitle }}</h2>
+        {{#each comics as |comic|}}
+        {{#> comic}}
+        <article>
+                <img src="{{ comic.thumbnail }}">
+                <a href="/comics/{{comic.id }}">
+                    <h2>{{comic.title}}</h2>
+                </a>
+            </article>
+        {{/comic}}
+        {{/each}}
+    </section>
+{{/if}}

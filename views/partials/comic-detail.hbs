@@ -1,0 +1,27 @@
+{{#if comic}}
+    <section class="comic">
+        <header>
+            <img src="{{comic.thumbnail}}">
+            <div>
+                <h2>{{comic.name }}</h2>
+                <ul>
+                    {{#each comic.creators as |creator|}}
+                        {{#> creator}}
+                            <li><span>{{ creator.role }}</span>{{creator.name }}</li>
+                        {{/creator}}
+                    {{/each}}
+                </ul>
+            </div>
+        </header>
+        
+        {{#each characters as |character|}}
+            {{#> character}}
+            <article>
+                <h2>{{ character.name }}</h2>
+                <img src="{{ character.thumbnail }}">
+                <p>{{ character.description }}</p>
+            </article>
+            {{/character}}
+        {{/each}}
+    </section>
+{{/if}}
