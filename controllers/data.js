@@ -32,7 +32,4 @@ async function get (url) {
     return cleanData;
 }
 
-module.exports = {
-    clean,
-    get
-}
+module.exports = get

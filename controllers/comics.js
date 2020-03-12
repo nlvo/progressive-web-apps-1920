@@ -1,4 +1,4 @@
-const data = require('./data');
+const fetch = require('./data');
 const endpoint = require('./endpoint.js');
 
 // Get data for the overview page and render
@@ -10,7 +10,7 @@ async function showAllComics (req, res) {
 // Fetch data
 async function getAllComics () {
     const comicsEndpoint = createComicsEndpoint();
-    const comics = await data.get(comicsEndpoint);
+    const comics = await fetch(comicsEndpoint);
     return comics;
 }
 
