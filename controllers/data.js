@@ -6,7 +6,8 @@ function clean (oldData) {
     
     return newData = newData.map((data) => {
         // https://stackoverflow.com/questions/54513877/javascript-merge-multiple-object-values-into-array
-        const creators = data.creators ? data.creators.items.map(creators => creators.name) : '';
+        const creators = data.creators ? data.creators.items.map(creators => creators) : '';
+        const stories = data.stories ? data.stories.items.map(stories => stories) : '';
         const thumbnail = data.thumbnail.path.includes('image_not_available') ? 'img/not-found' : data.thumbnail.path;
         return {
             id : data.id,
@@ -14,8 +15,8 @@ function clean (oldData) {
             thumbnail: thumbnail + '.' + data.thumbnail.extension,
             comicsAvailable: data.comics ? data.comics.available : data.description,
             creators: creators,
-            // characters: characters,
-            // stories: stories
+            // characters: data.characters,
+            stories: stories
         }
     });
 

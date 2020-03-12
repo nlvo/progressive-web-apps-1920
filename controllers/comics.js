@@ -4,7 +4,6 @@ const endpoint = require('./endpoint.js');
 // Get data for the overview page and render
 async function showAllComics (req, res) {
     const comics = await getAllComics();
-    console.log(comics)
     res.render('main', { comics, comicsPageTitle: 'All comics' })
 }
 

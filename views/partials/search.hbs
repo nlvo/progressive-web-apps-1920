@@ -1,0 +1,8 @@
+{{#each results as |result|}}
+    <article>
+        <img src="{{ result.thumbnail }}">
+        <a href="comics/{{result.id }}">
+            <h2>{{result.title}}</h2>
+        </a>
+    </article>
+{{/each}}

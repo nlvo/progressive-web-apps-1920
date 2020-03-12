@@ -3,7 +3,7 @@
         <header>
             <img src="{{comic.thumbnail}}">
             <div>
-                <h2>{{comic.name }}</h2>
+                <h2>{{comic.title }}</h2>
                 <ul>
                     {{#each comic.creators as |creator|}}
                         {{#> creator}}
@@ -17,7 +17,7 @@
         {{#each comicCharacters as |character|}}
             {{#> character}}
             <article>
-                <h2>{{ character.name }}</h2>
+                <h2>{{ character.title }}</h2>
                 <img src="{{ character.thumbnail }}">
                 <p>{{ character.description }}</p>
             </article>

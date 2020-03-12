@@ -11,7 +11,6 @@ async function showAllCharacters (req, res) {
 async function getAllCharacters () {
     const charactersEndpoint = createCharactersEndpoint();
     const characters = await data.get(charactersEndpoint);
-    console.log(characters)
     return characters;
 }
 
