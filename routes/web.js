@@ -8,7 +8,7 @@ const comic = require('../controllers/comic')
 const browse = require('../controllers/browse')
 
 app
-    // .get('/', characters.showAll)
+    .get('/', characters.showAll)
     .get('/browse', browse)
     .get('/comics', comics.showAll)
     .get('/creators', characters.showAll)

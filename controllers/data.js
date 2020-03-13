@@ -3,12 +3,11 @@ const fetch = require('node-fetch');
 function clean (oldData) {
 
     let newData = oldData.data.results;
-    console.log(newData)
     return newData = newData.map((data) => {
         // https://stackoverflow.com/questions/54513877/javascript-merge-multiple-object-values-into-array
         const creators = data.creators ? data.creators.items.map(creators => creators) : '';
         const stories = data.stories ? data.stories.items.map(stories => stories) : '';
-        const thumbnail = data.thumbnail.path.includes('image_not_available') ? 'img/not-found' : data.thumbnail.path;
+        const thumbnail = data.thumbnail.path.includes('image_not_available') ? '/img/not-found' : data.thumbnail.path;
         return {
             id : data.id,
             title: data.name || data.title,

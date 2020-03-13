@@ -15,7 +15,7 @@ async function getAll() {
 }
 
 function createComicsEndpoint () {
-    const comicsEndpoint = endpoint('comics', 'dateDescriptor=thisMonth&orderBy=-onsaleDate&limit=20');
+    const comicsEndpoint = endpoint('comics', 'dateDescriptor=thisMonth&orderBy=-onsaleDate&limit=8');
     return comicsEndpoint;
 }
 
