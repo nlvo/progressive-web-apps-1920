@@ -2,7 +2,7 @@
 ![mockup from Progressive Web App with the Marvel API](https://user-images.githubusercontent.com/8554238/76617951-aa173900-6527-11ea-8bab-ee79b67db3ce.png)
 [live demo link](https://marvel-dashboard.herokuapp.com/)
 
-A good [example](https://marvel-dashboard.herokuapp.com/comics/78072) of comic detailpage, with all the data. Because some of them are missing some data, either there are no creators or characters data available.
+A good [example](https://marvel-dashboard.herokuapp.com/comics/78072) of a comic detailpage, with all the data. Because some of them are missing some data, either there are no creators or characters data available.
 
 ## Description
 The concept of this application is a Marvel based application where you can get an overview with the latest comics release, series and/or events.
