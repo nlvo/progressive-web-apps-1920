@@ -12,8 +12,5 @@ app
     .set('view engine', 'hbs')
     .use(express.static('public'))
     .use(express.json())
-    // .use(bodyParser.urlencoded({ extended:true }))
-    // .use(bodyParser.urlencoded({ extended:true }))
-    // .use(methodOverride('_method'))
     .use(web)
     .listen(port, () => console.log(`listening on port ${port}`))

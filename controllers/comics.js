@@ -2,13 +2,13 @@ const fetch = require('./data');
 const endpoint = require('./endpoint.js');
 
 // Get data for the overview page and render
-async function showAllComics (req, res) {
-    const comics = await getAllComics();
+async function showAll (req, res) {
+    const comics = await getAll();
     res.render('main', { comics, comicsPageTitle: 'All comics' })
 }
 
 // Fetch data
-async function getAllComics () {
+async function getAll() {
     const comicsEndpoint = createComicsEndpoint();
     const comics = await fetch(comicsEndpoint);
     return comics;
@@ -21,6 +21,6 @@ function createComicsEndpoint () {
 
 // console.log(getAllComics)
 module.exports = {
-    showAllComics, 
-    getAllComics
+    showAll, 
+    getAll
 };

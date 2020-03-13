@@ -1,5 +1,5 @@
 const express = require('express');
-const app = express.Router();
+const app = express();
 const characters = require('../controllers/characters')
 const character = require('../controllers/character')
 const search = require('../controllers/search')
@@ -8,15 +8,15 @@ const comic = require('../controllers/comic')
 const browse = require('../controllers/browse')
 
 app
-    .get('/', characters.showAllCharacters)
+    // .get('/', characters.showAll)
     .get('/browse', browse)
-    .get('/comics', comics.showAllComics)
-    .get('/creators', characters.showAllCharacters)
-    .get('/characters', characters.showAllCharacters)
+    .get('/comics', comics.showAll)
+    .get('/creators', characters.showAll)
+    .get('/characters', characters.showAll)
+    .get('/series', characters.showAll)
+    .get('/events', characters.showAll)
+    .get('/search', search)
     .get('/characters/:id', character)
-    .get('/series', characters.showAllCharacters)
-    .get('/events', characters.showAllCharacters)
-    .get('/search', search.showSearchResults)
     .get('/comics/:id', comic)
 
 module.exports = app

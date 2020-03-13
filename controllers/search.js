@@ -15,7 +15,4 @@ function createSearchEndpoint (input) {
     return searchEndpoint;
 }
 
-module.exports = {
-    showSearchResults,
-    createSearchEndpoint
-};
+module.exports = showSearchResults;
