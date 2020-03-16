@@ -1,13 +1,13 @@
-{{> head }}
-    {{> header }}
+{{> partials/head }}
+    {{> partials/header }}
         <main>
-            {{> nav }}
+            {{> partials/nav }}
             <div class="container">
-                {{> comics }}                
-                {{> characters }}
-                {{> character-detail }}
-                {{> comic-detail }}
-                {{> search }}
+                {{> layouts/comics }}                
+                {{> layouts/characters }}
+                {{> layouts/character-detail }}
+                {{> layouts/comic-detail }}
+                {{> layouts/search }}
             </div>
         </main>
-{{> footer}}
+{{> partials/footer}}
