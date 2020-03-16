@@ -1,0 +1,16 @@
+{
+    "name": "Marvel Web App",
+    "short_name": "Marvel",
+    "description": "A Marvel Progressive Web App",
+    "start_url": "/",
+    "backround_color": "#ffffff",
+    "theme_color": "#cf2025",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "/img/icons-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        }
+    ]
+}
