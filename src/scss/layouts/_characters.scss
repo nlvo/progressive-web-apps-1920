@@ -1,0 +1,46 @@
+/* ---------------------------------------------
+ *	characters | overview
+ * ----------------------------------------------- */
+
+ .characters {
+	background-color: var(--grey-100);
+	justify-content: space-evenly;
+}
+
+.characters img {
+	border-radius: 10em;
+	height: 8em;
+	width: 8em;
+}
+
+.characters article {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 1em 0;
+	position: relative;
+	z-index: 1;
+	padding: 1em;
+}
+
+.characters article:after {
+	background-color: var(--grey-000);
+	bottom: 0;
+	border-radius: 0.125em;
+	border: 1px solid var(--grey-200);
+	content: '';
+	display: block;
+	height: 60%;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+}
+
+.characters article h2 {
+	text-align: center;
+}
+
+.characters article p {
+	color: var(--grey-400);
+	margin: 0;
+}

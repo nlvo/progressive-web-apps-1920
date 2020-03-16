@@ -1,0 +1,43 @@
+@import 'variables';
+@import 'fonts';
+@import 'partials/base';
+@import 'layouts/base';
+
+body {
+	background-color: var(--grey-000);
+	font-family: 'Open Sans';
+	font-size: 1em;
+	color: var(--grey-900);
+	margin: 0;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	color: var(--grey-900);
+	text-decoration: none;
+	transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+	color: var(--marvel-500);
+}
+
+h2 {
+	font-size: 1em;
+}
+
+/* ---------------------------------------------
+ *	container
+ * ----------------------------------------------- */
+
+ main {
+	display: flex;
+}

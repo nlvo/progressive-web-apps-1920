@@ -1,0 +1,95 @@
+/* ---------------------------------------------
+ *	mess | need to clean/put where it belongs
+ * ----------------------------------------------- */
+
+ #loader:empty:before {
+	animation: loading 1s infinite;
+	content: url('../img/Captain_America_Shield.svg');
+	display: flex;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	margin: 0 auto;
+	height: 8em;
+	width: 8em;
+}
+
+.container {
+	/* background-color: var(--grey-100); */
+	flex: 6;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 2em;
+	width: 100%;
+}
+
+section header {
+	flex: 0 0 100%;
+}
+
+section h1 {
+	color: var(--grey-800);
+	font-size: 1.6em;
+	padding: 0 .7em;
+	width: 100%;
+}
+
+section p {
+	color: var(--grey-400);
+	padding: 0 1em;
+	width: 100%;
+}
+
+section article {
+	padding: 0 1em;
+	transition: all 0.5s ease-in-out;
+	width: 14em;
+}
+
+section header span {
+	color: var(--grey-400);
+	margin-right: .625em;
+	text-transform: capitalize;
+}
+
+.character header,
+.comic header {
+	display: flex;
+}
+
+.comic h1 {
+	width: 60%;
+}
+
+.comic h2 {
+	color: var(--grey-500);
+    width: 100%;
+	margin: .5em 0;
+}
+
+.comic > h2 {
+	margin: 4em 1em 0;
+}
+
+.comic ul {
+	margin: 0 2em;
+}
+
+.comic header img,
+.character header img,
+section article img {
+	position: relative;
+	border-radius: 0.15em;
+	box-shadow: 0 4px 8px -1px rgba(0, 0, 0, .4), 0 2px 4px -1px rgba(0, 0, 0, .09);
+	transition: all 0.5s ease-in-out;
+	object-fit: cover;
+	height: 21em;
+    width: 14em;
+}
