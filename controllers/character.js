@@ -11,7 +11,7 @@ function createCharactersEndpoint (id) {
 async function getCharacter (id) {
 	const charactersEndpoint = createCharactersEndpoint(id);
 	const characters = await fetch(charactersEndpoint);
-	const findData = characters.find((data) => data.id === id);
+	const findData = characters.find((data) => data.id == id);
 	return findData;
 	// https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d
 }

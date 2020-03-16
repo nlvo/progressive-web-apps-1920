@@ -13,9 +13,9 @@ function clean (oldData) {
 			title: data.name || data.title,
 			thumbnail: `${thumbnail}.${data.thumbnail.extension}`,
 			comicsAvailable: data.comics ? data.comics.available : data.description,
-			creators,
+			creators: creators,
 			// characters: data.characters,
-			stories,
+			stories: stories,
 		};
 	});
 
