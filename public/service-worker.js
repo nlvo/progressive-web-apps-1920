@@ -7,8 +7,10 @@ self.addEventListener('install', event => {
 				return cache
 					.addAll([
 						'/',
+						'/img/marvel-logo.svg',
 						'/img/favicon.png',
 						'/css/styles.css',
+						'/fonts/icomoon.ttf',
 						'/js/main.js',
 					])
 					.then(() => self.skipWaiting());
