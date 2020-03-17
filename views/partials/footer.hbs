@@ -5,8 +5,8 @@ if ('serviceWorker' in navigator) {
             .register(
                 '/service-worker.js'
             )
-            .then((reg) => {
-                console.log('working');
+            .then((registration) => {
+                return registration.update();
             });
     });
 };
