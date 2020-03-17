@@ -6,4 +6,3 @@ return gulp.src([
 ])
 .pipe(concat('main.js'))
 .pipe(gulp.dest('./public/js'));
-

@@ -9,7 +9,8 @@
 	},
 	"scripts": {
 		"prestart": "npm run build",
-		"start": "nodemon server.js",
+		"start": "node server.js",
+		"prestart:dev": "npm run build",
 		"start:dev": "nodemon server.js",
 		"prebuild": "rimraf ./public/css && rimraf ./public/js",
 		"build": "node src/build/build-css.js && node src/build/build-js.js",
