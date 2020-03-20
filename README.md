@@ -12,14 +12,14 @@ Ik heb het gevoel dat ik vorige week meer progressie had gemaakt, mede door dat 
 #### Service Workers
 Deze week heb ik geleerd over Service Workers, het blijft een lastig onderwerp. Wel ik heb gezien hoe krachtig het is. Zeker toen ik voor Browser Technologies perongeluk dezelfde port had gebruikt voor het project (localhost:3000). En daar was de Marvel app! Daarnaast wil ik hier wat meer verdiepen als ik er tijd voor heb, om zo het concept hiervan nog beter te begrijpen.
 
-### Feedback
-Ik hoor graag wat er nog beter kan of enige tips! Dit zou ook de structuur, benaming of iets dergelijks kunnen zijn of extra/leuke features.
-
 #### PWA
 Het was heel leuk om je eigen "applicatie" te kunnen instaleren en hoe gemakkelijk dit eigelijk was.
 
 #### Build tools (Declans manier)
 In plaats van gebruik te maken van een task runner, heb ik met behulp van package.json script verschillende packages gebruikt om iets te builden.
+
+### Feedback
+Ik hoor graag wat er nog beter kan of enige tips! Dit zou ook de structuur, benaming of iets dergelijks kunnen zijn of extra/leuke features.
 
 ## Description
 The concept of this application is a Marvel based application where you can get an overview with the latest comics release, series and/or events.
