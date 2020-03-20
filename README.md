@@ -4,6 +4,23 @@
 
 A good [example](https://marvel-dashboard.herokuapp.com/comics/78072) of a comic detailpage, with all the data. Because some of them are missing some data, either there are no creators or characters data available.
 
+## !Important (Dutch)
+### Trots
+Ik heb het gevoel dat ik vorige week meer progressie had gemaakt, mede door dat ik daar veel meer functionaliteiten heb toegevoegd. Wel ben ik blij met wat er nu staat!
+
+### Geleerd
+#### Service Workers
+Deze week heb ik geleerd over Service Workers, het blijft een lastig onderwerp. Wel ik heb gezien hoe krachtig het is. Zeker toen ik voor Browser Technologies perongeluk dezelfde port had gebruikt voor het project (localhost:3000). En daar was de Marvel app! Daarnaast wil ik hier wat meer verdiepen als ik er tijd voor heb, om zo het concept hiervan nog beter te begrijpen.
+
+### Feedback
+Ik hoor graag wat er nog beter kan of enige tips! Dit zou ook de structuur, benaming of iets dergelijks kunnen zijn of extra/leuke features.
+
+#### PWA
+Het was heel leuk om je eigen "applicatie" te kunnen instaleren en hoe gemakkelijk dit eigelijk was.
+
+#### Build tools (Declans manier)
+In plaats van gebruik te maken van een task runner, heb ik met behulp van package.json script verschillende packages gebruikt om iets te builden.
+
 ## Description
 The concept of this application is a Marvel based application where you can get an overview with the latest comics release, series and/or events.
 
@@ -83,6 +100,9 @@ Things/features I would like to add
     - [x] overview
     - [x] detail
 - [ ] filter
+
+## Shoutout
+Declan example for build with script.
 
 ### License
 Copyright © 2020, [Lien Vo](https://github.com/nlvo) . Released under the [MIT license](https://github.com/nlvo/web-app-from-scratch-1920/blob/master/LICENSE). Data provided by Marvel. © 2020 Marvel.
