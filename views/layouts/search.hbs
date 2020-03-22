@@ -4,7 +4,7 @@
     <p>{{results.length}} resultaten</p>
     {{#each results as |result|}}
         <article>
-            <img src="{{ result.thumbnail }}">
+            <img src="{{ result.thumbnail }}" alt="Image from {{result.title}}">
             <a href="comics/{{result.id }}">
                 <h2>{{result.title}}</h2>
             </a>

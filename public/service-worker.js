@@ -8,7 +8,7 @@ self.addEventListener('install', event => {
 					.addAll([
 						'/',
 						'/img/marvel-logo.svg',
-						'/img/favicon.png',
+						'/favicon.png',
 						'/css/styles.css',
 						'/fonts/icomoon.ttf',
 						'/js/main.js',

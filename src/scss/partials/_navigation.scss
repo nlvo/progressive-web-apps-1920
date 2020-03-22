@@ -4,20 +4,20 @@
 
  aside {
 	position: fixed;
-    z-index: 1;
+    z-index: 2;
     left: 0;
     background: #fff;
     right: 0;
 	bottom: 0;
 	nav {
-		border-top: 1px solid var(--grey-200);
+		border-top: 1px solid $grey-200;
 		box-shadow: 0 4px 8px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.09);
 		display: flex;
 		justify-content: center;
 		ul {
 			li {
 				a {
-					color: var(--grey-300);
+					color: $grey-300;
 					display: inline-flex;
 					flex-direction: column;
 					&:before {
@@ -27,11 +27,11 @@
 					}
 				}
 				a.active {
-					color: var(--grey-900);
+					color: $grey-900;
 				}
 				&:first-of-type {
 					display: none;
-					color: var(--grey-400);
+					color: $grey-400;
 					font-weight: bold;
 					text-transform: uppercase;
 					font-size: 0.75em;
@@ -50,7 +50,7 @@
 		}
 	}
 	footer {
-		color: var(--grey-400);
+		color: $grey-400;
 	}
 }
 
@@ -119,7 +119,7 @@
 
 @media screen and (min-width: 48em) {
 	aside {
-		border-right: 1px solid var(--grey-100);
+		border-right: 1px solid $grey-100;
 		padding: 2em;
 		position: relative;
 		flex: 1;
