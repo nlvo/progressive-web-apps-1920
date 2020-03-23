@@ -9,7 +9,7 @@
 	},
 	"scripts": {
 		"prestart": "npm run build",
-		"start": "node server.js",
+		"start": "node index.js",
 		"start:dev": "nodemon server.js & npm run watch",
 		"prebuild": "rimraf ./public/css && rimraf ./public/js",
 		"build": "node src/build/build-css.js && node src/build/build-js.js",
