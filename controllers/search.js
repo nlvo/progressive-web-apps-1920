@@ -16,6 +16,7 @@ async function showSearchResults (req, res) {
 	res.render('main', {
 		results: searchResults,
 		searchPageTitle: `'${req.query.search}' in Alle Comics`,
+		search: true,
 	});
 }
 

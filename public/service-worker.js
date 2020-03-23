@@ -1,5 +1,4 @@
 self.addEventListener('install', event => {
-	console.log('install');
 	event.waitUntil(
 		caches
 		.open('v1')
@@ -18,7 +17,6 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('activate', event => {
-	console.log('activating')
 	event.waitUntil(clients.claim());
 });
 

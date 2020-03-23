@@ -1,5 +1,15 @@
+{{#if search}}
+<section class="search-form">
+    <form action="/search">
+        <label for="search">Search by characters, comics or series</label>
+        <input type="search" id="search" name="search" placeholder="Search by characters, comics or series">
+        <button>search</button>
+    </form>
+</section>
+{{/if}}
+
 {{#if results}}
-<section>
+<section class="search">
     <h1>{{ searchPageTitle }}</h1>
     <p>{{results.length}} resultaten</p>
     {{#each results as |result|}}
