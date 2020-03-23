@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="416px" height="416px" viewBox="0 0 416 416" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>search-outline</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="search-outline" transform="translate(16.000000, 16.000000)" stroke="#525E68" stroke-width="32">
+            <path d="M157.09,0 C70.3315886,0 0,70.3315886 0,157.09 C0,243.848411 70.3315886,314.18 157.09,314.18 C243.848411,314.18 314.18,243.848411 314.18,157.09 C314.174478,70.3338761 243.846124,0.00552217461 157.09,0 Z" id="Path"></path>
+            <line x1="274.29" y1="274.29" x2="384" y2="384" id="Path" stroke-linecap="round"></line>
+        </g>
+    </g>
+</svg>

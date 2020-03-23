@@ -2,7 +2,7 @@
  *	mess | need to clean/put where it belongs
  * ----------------------------------------------- */
 
- #loader:empty:before {
+#loader:empty:before {
 	animation: loading 1s infinite;
 	content: url('../img/Captain_America_Shield.svg');
 	display: flex;
@@ -26,60 +26,69 @@ section {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	padding: 2em;
+	padding: 1em;
 	width: 100%;
-}
 
-section header {
-	flex: 0 0 100%;
-}
+	article {
+		padding: 0 1em;
+		transition: all 0.5s ease-in-out;
+		width: 100%;
+		margin-bottom: 4em;
+	}
 
-section h1 {
-	color: $grey-800;
-	font-size: 1.6em;
-	padding: 0 .7em;
-	width: 100%;
-}
+	header {
+		flex: 0 0 100%;
 
-section p {
-	color: $grey-400;
-	padding: 0 1em;
-	width: 100%;
-}
+		span {
+			color: $grey-500;
+			margin-right: .625em;
+			text-transform: capitalize;
+		}
+	}
 
-section article {
-	padding: 0 1em;
-	transition: all 0.5s ease-in-out;
-	width: 14em;
-}
+	h1 {
+		color: $grey-800;
+		font-size: 1.6em;
+		padding: 0 .7em;
+		width: 100%;
+	}
 
-section header span {
-	color: $grey-400;
-	margin-right: .625em;
-	text-transform: capitalize;
+	p {
+		color: $grey-500;
+		padding: 0 1em;
+		width: 100%;
+	}
 }
 
 .character header,
 .comic header {
 	display: flex;
+	flex-direction: column;
 }
 
-.comic h1 {
-	width: 60%;
-}
+.comic {
+	h1 {
+		width: 60%;
+	}
 
-.comic h2 {
-	color: $grey-500;
-    width: 100%;
-	margin: .5em 0;
-}
+	h2 {
+		color: $grey-500;
+		width: 100%;
+		margin: .5em 0;
+	}
 
-.comic > h2 {
-	margin: 4em 1em 0;
-}
+	&>h2 {
+		margin: 2em 1em 0;
+	}
 
-.comic ul {
-	margin: 0 2em;
+	ul {
+		margin: 0 2em;
+	}
+
+	div {
+		display: flex;
+		flex-direction: column;
+	}
 }
 
 .comic header img,
@@ -91,5 +100,24 @@ section article img {
 	transition: all 0.5s ease-in-out;
 	object-fit: cover;
 	height: 21em;
-    width: 14em;
+	width: 100%;
+}
+
+@media screen and (min-width: 48em) {
+	section {
+		article {
+			width: 14em;
+		}
+	}
+
+	.comic header img,
+	.character header img,
+	section article img {
+		width: 14em;
+	}
+
+	.character header,
+	.comic header {
+		flex-direction: row;
+	}
 }

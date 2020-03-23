@@ -3,9 +3,10 @@
  * ----------------------------------------------- */
 
 body {
-	&> header {
+	&>header {
 		border: 1px solid $grey-100;
-		padding: .25em 2em;
+		padding: .25em 1em;
+
 		img {
 			box-shadow: none;
 			padding-right: 1em;
@@ -13,57 +14,136 @@ body {
 		}
 	}
 }
-header {
-	nav {
+
+.navbar-top {
+	ul {
+		li {
+			align-self: center;
+			flex: 2;
+			padding-right: 1em;
+			list-style-type: none;
+
+			&:first-child {
+				color: $grey-600;
+				font-size: 1.6em;
+				font-weight: 600;
+				display: flex;
+				flex: 1;
+				margin: .625em 0;
+			}
+
+			form {
+				display: none;
+			}
+		}
+
+		&:after {
+			content: '';
+			flex: 1;
+		}
+	}
+}
+
+// body {
+// 	&> header {
+// 		border: 1px solid $grey-100;
+// 		padding: .25em 1em;
+// 		img {
+// 			box-shadow: none;
+// 			padding-right: 1em;
+// 			width: 3em;
+// 		}
+// 	}
+// }
+// header {
+// 	nav {
+// 		ul {
+// 			display: flex;
+// 			li {
+// 				&:first-child {
+// 					color: $grey-600;
+// 					font-size: 1.6em;
+// 					font-weight: 600;
+// 					display: flex;
+// 					flex: 1;
+// 					margin: .25em 0;
+// 					width: 12em;
+// 				}
+// 				align-self: center;
+// 				flex: 2;
+// 				padding-right: 1em;
+// 				list-style-type: none;
+// 				form {
+// 					display: none;
+// 				}
+// 			}
+// 			&:after {
+// 				content: '';
+// 				flex: 1;
+// 			}
+// 		}
+// 	}
+// }
+
+@media screen and (min-width: 48em) {
+
+	.navbar-top {
 		ul {
 			display: flex;
+
 			li {
-				&:first-child {
+				form {
 					display: flex;
-					flex: 1;
-					width: 12em;
 				}
-				align-self: center;
-				flex: 2;
-				padding-right: 1em;
-				list-style-type: none;
 			}
+
 			&:after {
 				content: '';
 				flex: 1;
 			}
 		}
 	}
-}
 
-form {
-	display: flex;
-	label {
-		opacity: 0;
-	}
-	input {
-		background-color: $grey-100;
-		border: 0;
-		border-radius: 10em;
-		font-size: 1em;
-		padding: .625em 2em;
-		margin: 0 2em;
-		flex: 1;
-		&:focus {
-			outline: $marvel-400;
+	form {
+		display: flex;
+		align-items: center;
+		align-self: flex-start;
+		width: 100%;
+
+		label {
+			opacity: 0;
+			height: 0;
+			width: 0;
 		}
-	}
-	button {
-		border: 0;
-		background-color: $marvel-500;
-		border-radius: 10em;
-		color: $grey-000;
-		cursor: pointer;
-		font-size: 1em;
-		padding: .625em 3em;
-		transition: background-color .5s ease-in-out;
-		&:hover {
-			background-color: $marvel-700;
+
+		input {
+			background-color: $grey-100;
+			border: 0;
+			border-radius: 10em;
+			font-size: 1em;
+			padding: .625em 2em;
+			margin: 1em;
+			flex: 1;
+
+			&:focus {
+				outline: $marvel-400;
+			}
+		}
+
+		button {
+			display: flex;
+			border: 0;
+			background-color: $marvel-500;
+			border-radius: 10em;
+			color: $grey-000;
+			cursor: pointer;
+			font-size: 1em;
+			padding: .625em 3em;
+			transition: background-color .5s ease-in-out;
+
+			&:hover {
+				background-color: $marvel-700;
+			}
 		}
 	}
 }

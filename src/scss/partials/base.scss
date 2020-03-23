@@ -1,3 +1,46 @@
 @import 'header';
 @import 'navigation';
 @import 'footer';
+
+body {
+	background-color: $grey-000;
+	font-family: 'Open Sans';
+	font-size: 1em;
+	color: $grey-900;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	color: $grey-900;
+	text-decoration: none;
+	transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+	color: $marvel-500;
+}
+
+h2 {
+	font-size: 1em;
+}
+
+/* ---------------------------------------------
+ *	container
+ * ----------------------------------------------- */
+
+main {
+	display: flex;
+	height: 100%;
+}

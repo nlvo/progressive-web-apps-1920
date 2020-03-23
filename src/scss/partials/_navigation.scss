@@ -17,13 +17,18 @@
 		ul {
 			li {
 				a {
-					color: $grey-300;
+					color: $grey-500;
 					display: inline-flex;
 					flex-direction: column;
 					&:before {
+						content: '';
 						align-self: center;
 						display: inline-flex;
-						font-family: 'ionicons';
+						width: 1em;
+						height: 1.2em;
+						background-size: contain;
+						background-repeat: no-repeat;
+						background-position: center;
 					}
 				}
 				a.active {
@@ -31,7 +36,7 @@
 				}
 				&:first-of-type {
 					display: none;
-					color: $grey-400;
+					color: $grey-700;
 					font-weight: bold;
 					text-transform: uppercase;
 					font-size: 0.75em;
@@ -50,7 +55,7 @@
 		}
 	}
 	footer {
-		color: $grey-400;
+		color: $grey-500;
 	}
 }
 
@@ -60,7 +65,7 @@
 		&:nth-of-type(2) {
 			a {
 				&:before {
-					content: '\e906';
+					background-image: url('/img/icons/home-outline.svg');
 				}
 			}
 		}
@@ -68,7 +73,7 @@
 			display: none;
 			a {
 				&:before {
-					content: '\e905';
+					background-image: url('/img/icons/planet-outline.svg');
 				}
 			}
 		}
@@ -79,7 +84,7 @@
 		&:nth-of-type(2) {
 			a {
 				&:before {
-					content: '\e901';
+					background-image: url('/img/icons/book-outline.svg');
 				}
 			}
 		}
@@ -87,21 +92,22 @@
 			display: none;
 			a {
 				&:before {
-					content: '\e903';
+					background-image: url('/img/icons/glasses-outline.svg');
 				}
 			}
 		}
 		&:nth-of-type(4) {
+			display: none;
 			a {
 				&:before {
-					content: '\e904';
+					background-image: url('/img/icons/people-outline.svg');
 				}
 			}
 		}
 		&:nth-of-type(5) {
 			a {
 				&:before {
-					content: '\e900';
+					background-image: url('/img/icons/albums-outline.svg');
 				}
 			}
 		}
@@ -109,7 +115,14 @@
 			display: none;
 			a {
 				&:before {
-					content: '\e902';
+					background-image: url('/img/icons/calendar-outline.svg');
+				}
+			}
+		}
+		&:nth-of-type(7) {
+			a {
+				&:before {
+					background-image: url('/img/icons/search-outline.svg');
 				}
 			}
 		}
@@ -137,7 +150,7 @@
 					}
 					a {
 						&::before {
-							padding-right: .625em;
+							margin-right: .625em;
 						}
 						flex-direction: row;
 					}
