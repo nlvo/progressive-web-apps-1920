@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
-const concat = require('gulp-concat');
+const rename = require('gulp-rename');
 const cleanCSS = require('gulp-clean-css');
 
 return gulp.src([
@@ -8,5 +8,5 @@ return gulp.src([
 ])
 	.pipe(sass())
 	.pipe(cleanCSS())
-	.pipe(concat('styles.css'))
+	.pipe(rename('style.min.css'))
 	.pipe(gulp.dest('./public/css'));
