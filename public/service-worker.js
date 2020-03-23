@@ -8,7 +8,6 @@ self.addEventListener('install', event => {
 						'/img/marvel-logo.svg',
 						'/favicon.png',
 						'/css/style.min.css',
-						'/fonts/icomoon.ttf',
 						'/js/main.min.js',
 					])
 					.then(() => self.skipWaiting());
