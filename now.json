@@ -6,7 +6,7 @@
     }],
     "routes": [{
         "src": "/.*",
-        "dest": "/main.js"
+        "dest": "/index.js"
     }],
     "env": {
         "HASH": "@hash",

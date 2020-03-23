@@ -15,7 +15,7 @@ app
 	}))
 	.set('view engine', 'hbs')
 	.set('views', path.join(__dirname, 'views/'))
-	.use(express.static('public'))
+	.use(express.static(path.join(__dirname, '/public')))
 	.use(express.json())
 	.use(web)
 	.listen(port);
