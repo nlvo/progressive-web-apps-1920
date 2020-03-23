@@ -4,7 +4,7 @@
      {{#each characters as |character|}}
         {{#> character}}
         <article>
-            <img src="{{ character.thumbnail }}">
+            <img src="{{ character.thumbnail }}" alt="Image from the {{ character.title }} character.">
             <a href="/characters/{{ character.id }}">
                 <h2>{{ character.title }}</h2>
             </a>

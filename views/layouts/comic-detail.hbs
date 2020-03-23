@@ -1,7 +1,7 @@
 {{#if comic}}
     <section class="comic">
         <header>
-            <img src="{{comic.thumbnail}}">
+            <img src="{{comic.thumbnail}}" alt="Image from the {{ comic.title }} cover.">
             <div>
                 <h1>{{comic.title }}</h1>
                 <ul>
@@ -20,7 +20,7 @@
             {{#> character}}
                 <article>
                     <h3>{{ character.title }}</h3>
-                    <img src="{{ character.thumbnail }}">
+                    <img src="{{ character.thumbnail }}" alt="Image from the {{ character.title }} character.">
                     <p>{{ character.description }}</p>
                 </article>
             {{/character}}

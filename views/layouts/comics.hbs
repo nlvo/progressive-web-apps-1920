@@ -4,7 +4,7 @@
         {{#each comics as |comic|}}
             {{#> comic}}
                 <article>
-                    <img src="{{ comic.thumbnail }}">
+                    <img src="{{ comic.thumbnail }}" alt="{{comic.title}} Cover Image">
                     <a href="/comics/{{comic.id }}">
                         <h2>{{comic.title}}</h2>
                     </a>
