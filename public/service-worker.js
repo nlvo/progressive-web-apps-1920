@@ -6,12 +6,11 @@ self.addEventListener('install', event => {
 		.then(cache => {
 				return cache
 					.addAll([
-						'/',
 						'/img/marvel-logo.svg',
 						'/favicon.png',
-						'/css/styles.css',
+						'/css/style.min.css',
 						'/fonts/icomoon.ttf',
-						'/js/main.js',
+						'/js/main.min.js',
 					])
 					.then(() => self.skipWaiting());
 		})
