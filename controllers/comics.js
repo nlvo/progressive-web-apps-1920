@@ -20,7 +20,6 @@ async function showAll (req, res) {
 	res.render('main', { comics, comicsPageTitle: 'All comics' });
 }
 
-// console.log(getAllComics)
 module.exports = {
 	showAll,
 	getAll,
