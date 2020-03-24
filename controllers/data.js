@@ -14,7 +14,6 @@ function clean (oldData) {
 			thumbnail: `${thumbnail}.${data.thumbnail.extension}`,
 			comicsAvailable: data.comics ? data.comics.available : data.description,
 			creators,
-			// characters: data.characters,
 			stories,
 		};
 	});
