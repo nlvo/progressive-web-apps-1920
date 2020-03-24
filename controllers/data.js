@@ -7,7 +7,7 @@ function clean (oldData) {
 		// https://stackoverflow.com/questions/54513877/javascript-merge-multiple-object-values-into-array
 		const creators = data.creators ? data.creators.items.map((creator) => creator) : '';
 		const stories = data.stories ? data.stories.items.map((story) => story) : '';
-		const thumbnail = data.thumbnail.path.includes('image_not_available') ? '/img/not-found' : data.thumbnail.path;
+		const thumbnail = data.thumbnail.path.includes('image_not_available') ? '/img/not-found' : `${data.thumbnail.path}/portrait_fantastic`;
 		return {
 			id: data.id,
 			title: data.name || data.title,
