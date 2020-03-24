@@ -3,7 +3,7 @@ const characters = require('./characters');
 
 // render browse page when the data of all sections are available
 async function showBrowse (req, res) {
-	const comicsData = await comics.getAll();
+	const comicsData = await comics.getEight();
 	const charactersData = await characters.getAll();
 	res.render('main', {
 		comics: comicsData,

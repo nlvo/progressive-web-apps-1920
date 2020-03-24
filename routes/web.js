@@ -19,6 +19,7 @@ app
 	.get('/events', characters.showAll)
 	.get('/search', search)
 	.get('/offline', offline)
+	.get('/comics/page', comics.getMore)
 	.get('/characters/:id', character)
 	.get('/comics/:id', comic);
 
