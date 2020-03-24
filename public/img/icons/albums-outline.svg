@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="416px" height="384px" viewBox="0 0 416 384" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
-    <title>albums-outline</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="albums-outline" transform="translate(16.000000, 15.000000)" stroke="#525E68" stroke-width="32">
-            <rect id="Rectangle" stroke-linejoin="round" x="0" y="97" width="384" height="256" rx="28.87"></rect>
-            <line x1="80" y1="1" x2="304" y2="1" id="Path" fill="#000000" fill-rule="nonzero" stroke-linecap="round"></line>
-            <line x1="48" y1="49" x2="336" y2="49" id="Path" fill="#000000" fill-rule="nonzero" stroke-linecap="round"></line>
-        </g>
-    </g>
-</svg>
+<svg width="416" height="384" xmlns="http://www.w3.org/2000/svg"><g transform="translate(16 15)" stroke="#525E68" stroke-width="32" fill="none" fill-rule="evenodd"><rect stroke-linejoin="round" y="97" width="384" height="256" rx="28.87"/><path fill="#000" fill-rule="nonzero" stroke-linecap="round" d="M80 1h224M48 49h288"/></g></svg>

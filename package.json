@@ -10,10 +10,10 @@
 	"scripts": {
 		"prestart": "npm run build",
 		"start": "node index.js",
-		"start:dev": "nodemon server.js & npm run watch",
-		"prebuild": "rimraf ./public/css && rimraf ./public/js",
-		"build": "node src/build/build-css.js && node src/build/build-js.js",
-		"watch": "chokidar 'src/scss/*/*.scss' --command 'npm run build' & chokidar 'src/js/*.js' --command 'npm run build'",
+		"start:dev": "nodemon index.js & npm run watch",
+		"prebuild": "rimraf ./public",
+		"build": "node build-scripts/build.js",
+		"watch": "chokidar 'src/scss/*/*.scss' --command 'npm run build' & chokidar 'src/js/*.js' --command 'npm run build'  & chokidar 'src/img/*' --command 'npm run build'",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
@@ -32,8 +32,10 @@
 		"express-handlebars": "^3.1.0",
 		"gulp": "^4.0.2",
 		"gulp-clean-css": "^4.3.0",
+		"gulp-imagemin": "^7.1.0",
 		"gulp-minify": "^3.1.0",
 		"gulp-rename": "^2.0.0",
+		"gulp-rev": "^9.0.0",
 		"gulp-sass": "^4.0.2",
 		"node-fetch": "^2.6.0",
 		"path": "^0.12.7"

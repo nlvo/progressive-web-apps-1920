@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="512px" height="352px" viewBox="0 0 512 352" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
-    <title>planet-outline</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="planet-outline" transform="translate(16.000000, 16.000000)" stroke="#525E68" stroke-width="32">
-            <path d="M397.48,188.46 C456.35,235.7 489.09,277.46 477.79,297.01 C459.94,327.86 339.01,291.53 207.69,215.86 C76.37,140.19 -15.63,53.84 2.21,23 C13.37,3.72 64.79,10.68 133.85,37.09" id="Path"></path>
-            <circle id="Oval" cx="240" cy="160" r="160"></circle>
-        </g>
-    </g>
-</svg>
+<svg width="512" height="352" xmlns="http://www.w3.org/2000/svg"><g transform="translate(16 16)" stroke="#525E68" stroke-width="32" fill="none" fill-rule="evenodd"><path d="M397.48 188.46c58.87 47.24 91.61 89 80.31 108.55-17.85 30.85-138.78-5.48-270.1-81.15C76.37 140.19-15.63 53.84 2.21 23 13.37 3.72 64.79 10.68 133.85 37.09"/><circle cx="240" cy="160" r="160"/></g></svg>

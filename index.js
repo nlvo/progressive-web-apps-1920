@@ -14,8 +14,8 @@ app
 		partialsDir: 'views',
 	}))
 	.set('view engine', 'hbs')
-	.set('views', path.join(__dirname, 'views/'))
-	.use(express.static(path.join(__dirname, '/public')))
+	.set('views', path.join(__dirname, 'views'))
+	.use(express.static(path.join(__dirname, 'public')))
 	.use(express.json())
 	.use(web)
 	.listen(port);

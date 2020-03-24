@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="416px" height="416px" viewBox="0 0 416 416" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
-    <title>search-outline</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="search-outline" transform="translate(16.000000, 16.000000)" stroke="#525E68" stroke-width="32">
-            <path d="M157.09,0 C70.3315886,0 0,70.3315886 0,157.09 C0,243.848411 70.3315886,314.18 157.09,314.18 C243.848411,314.18 314.18,243.848411 314.18,157.09 C314.174478,70.3338761 243.846124,0.00552217461 157.09,0 Z" id="Path"></path>
-            <line x1="274.29" y1="274.29" x2="384" y2="384" id="Path" stroke-linecap="round"></line>
-        </g>
-    </g>
-</svg>
+<svg width="416" height="416" xmlns="http://www.w3.org/2000/svg"><g stroke="#525E68" stroke-width="32" fill="none" fill-rule="evenodd"><path d="M173.09 16C86.332 16 16 86.332 16 173.09c0 86.758 70.332 157.09 157.09 157.09 86.758 0 157.09-70.332 157.09-157.09C330.174 86.334 259.846 16.006 173.09 16z"/><path stroke-linecap="round" d="M290.29 290.29L400 400"/></g></svg>

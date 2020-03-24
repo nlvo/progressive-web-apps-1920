@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="480px" height="416px" viewBox="0 0 480 416" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
-    <title>book-outline</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-        <g id="book-outline" transform="translate(16.000000, 16.000000)" stroke="#525E68" stroke-width="32">
-            <path d="M224,96 C240,32.84 300.43,0.59 432,-0.000113513871 C436.248355,-0.0160216238 440.327333,1.66454242 443.331395,4.66860456 C446.335458,7.67266669 448.016022,11.7516448 448.000114,16 L448.000114,304 C448.000114,312.836556 440.836556,320 432,320 C304,320 254.55,345.81 224,384 C193.63,346 144,320 16,320 C6.12,320 -0.000113513871,311.95 -0.000113513871,302.07 L-0.000113513871,16 C-0.0160216238,11.7516448 1.66454242,7.67266669 4.66860456,4.66860456 C7.67266669,1.66454242 11.7516448,-0.0160216238 16,-0.000113513871 C147.57,0.59 208,32.84 224,96 Z" id="Path"></path>
-            <line x1="224" y1="96" x2="224" y2="384" id="Path"></line>
-        </g>
-    </g>
-</svg>
+<svg width="480" height="416" xmlns="http://www.w3.org/2000/svg"><path d="M240 112c16-63.16 76.43-95.41 208-96a15.94 15.94 0 0116 16v288c0 8.837-7.163 16-16 16-128 0-177.45 25.81-208 64-30.37-38-80-64-208-64-9.88 0-16-8.05-16-17.93V32a15.94 15.94 0 0116-16c131.57.59 192 32.84 208 96zm0 0v288" stroke="#525E68" stroke-width="32" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="480px" height="352px" viewBox="0 0 480 352" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>people-outline</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="people-outline" transform="translate(15.000000, 16.000000)" stroke="#525E68" stroke-width="32">
+            <path d="M371,72 C368.07,112.67 337.9,144 305,144 C272.1,144 241.88,112.68 239,72 C236,29.69 265.37,0 305,0 C344.63,0 374,30.46 371,72 Z" id="Path" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M305,208 C239.83,208 177.16,240.37 161.46,303.41 C159.38,311.75 164.61,320 173.18,320 L436.83,320 C445.4,320 450.6,311.75 448.55,303.41 C432.85,239.36 370.18,208 305,208 Z" id="Path"></path>
+            <path d="M169,89.94 C166.66,122.42 142.28,148 116,148 C89.72,148 65.3,122.43 63,89.94 C60.61,56.15 84.34,32 116,32 C147.66,32 171.39,56.77 169,89.94 Z" id="Path" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M175,210 C156.95,201.73 137.07,198.55 116,198.55 C64,198.55 13.9,224.4 1.35,274.75 C-0.3,281.41 3.88,288 10.72,288 L123,288" id="Path" stroke-linecap="round"></path>
+        </g>
+    </g>
+</svg>
