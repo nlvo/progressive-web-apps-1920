@@ -2,15 +2,14 @@ self.addEventListener('install', event => {
 	event.waitUntil(
 		caches
 		.open('v1')
-		.then(cache => {
-				return cache
-					.addAll([
-						'/img/marvel-logo.svg',
-						'/favicon.png',
-						'/css/style.min.css',
-						'/js/main.min.js',
-					])
-					.then(() => self.skipWaiting());
+		.then(async (cache) => {
+				await cache.addAll([
+				'/offline',
+				'/img/marvel-logo.svg',
+				'/img/avengers-logo.svg',
+				'/css/style.min.css',
+			]);
+			return self.skipWaiting();
 		})
 	);
 });

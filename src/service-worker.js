@@ -1,17 +1,17 @@
 self.addEventListener('install', event => {
 	event.waitUntil(
 		caches
-		.open('v1')
-		.then(cache => {
-				return cache
+			.open('v1')
+			.then(async (cache) => {
+				await cache
 					.addAll([
+						'/offline',
 						'/img/marvel-logo.svg',
-						'/favicon.png',
+						'/img/avengers-logo.svg',
 						'/css/style.min.css',
-						'/js/main.min.js',
-					])
-					.then(() => self.skipWaiting());
-		})
+					]);
+				return self.skipWaiting();
+			}),
 	);
 });
 
@@ -23,11 +23,11 @@ self.addEventListener('fetch', event => {
 	event.respondWith(
 		caches
 			.match(event.request)
-			.then(response => {
-				if(response) {
-					return response
+			.then((response) => {
+				if (response) {
+					return response;
 				}
-				return fetch(event.request)
-			})
-	)
+				return fetch(event.request);
+			}),
+	);
 });
