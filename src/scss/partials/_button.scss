@@ -1,0 +1,13 @@
+.btn {
+    background-color: $grey-300;
+    border-radius: 10em;
+    color: $grey-000;
+    font-size: 1em;
+    padding: .625em 3em;
+    transition: background-color .3s ease-in-out;
+    margin: -2em auto 2em;
+    &:hover {
+        background-color: $grey-400;
+        color: $grey-000;
+    }
+}

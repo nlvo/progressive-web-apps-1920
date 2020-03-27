@@ -1,7 +1,7 @@
 const fetch = require('./data');
 const endpoint = require('./endpoint.js');
 
-// create new endpoint for all comics
+// create new endpoint for 8 comics
 function createEightEndpoint () {
 	const offset = 0;
 	const limit = 8;
@@ -9,7 +9,7 @@ function createEightEndpoint () {
 	return comicsEndpoint;
 }
 
-// get all comics and return when available
+// get all eight comics and return when available
 async function getEight () {
 	const comicsEndpoint = createEightEndpoint();
 	const comics = await fetch(comicsEndpoint);
@@ -24,7 +24,7 @@ function createComicsEndpoint (pageNumber) {
 	return comicsEndpoint;
 }
 
-// get all comics and return when available
+// get 8 more comics and return when available
 async function getMore (req, res) {
 	const comicsEndpoint = createComicsEndpoint(req.query.id);
 	const comics = await fetch(comicsEndpoint);
