@@ -1,8 +1,8 @@
 # Progressive Web App with Marvel API
 ![mockup from Progressive Web App with the Marvel API](https://user-images.githubusercontent.com/8554238/76617951-aa173900-6527-11ea-8bab-ee79b67db3ce.png)
-[live demo link](https://marvel-dashboard.herokuapp.com/)
+[live demo link](http://marvel.nlvo.now.sh/)
 
-A good [example](https://marvel-dashboard.herokuapp.com/comics/78072) of a comic detailpage, with all the data. Because some of them are missing some data, either there are no creators or characters data available.
+A good [example](https://marvel.nlvo.now.sh/comics/78072) of a comic detailpage, with all the data. Because some of them are missing some data, either there are no creators or characters data available.
 
 ## Installation
 ```
