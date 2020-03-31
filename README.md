@@ -4,26 +4,6 @@
 
 A good [example](https://marvel-dashboard.herokuapp.com/comics/78072) of a comic detailpage, with all the data. Because some of them are missing some data, either there are no creators or characters data available.
 
-## !Important (Dutch)
-### Trots
-Ik heb het gevoel dat ik vorige week meer progressie had gemaakt, mede door dat ik daar veel meer functionaliteiten heb toegevoegd. Wel ben ik blij met wat er nu staat!
-
-### Geleerd
-#### Service Workers
-Deze week heb ik geleerd over Service Workers, het blijft een lastig onderwerp. Wel ik heb gezien hoe krachtig het is. Zeker toen ik voor Browser Technologies perongeluk dezelfde port had gebruikt voor het project (localhost:3000). En daar was de Marvel app! Daarnaast wil ik hier wat meer verdiepen als ik er tijd voor heb, om zo het concept hiervan nog beter te begrijpen.
-
-#### PWA
-Het was heel leuk om je eigen "applicatie" te kunnen instaleren en hoe gemakkelijk dit eigelijk was.
-
-#### Build tools (Declans manier)
-In plaats van gebruik te maken van een task runner, heb ik met behulp van package.json script verschillende packages gebruikt om iets te builden.
-
-### Feedback
-Ik hoor graag wat er nog beter kan of enige tips! Dit zou ook de structuur, benaming of iets dergelijks kunnen zijn of extra/leuke features.
-
-## Description
-The concept of this application is a Marvel based application where you can get an overview with the latest comics release, series and/or events.
-
 ## Installation
 ```
 # Clone or download the repository
@@ -33,7 +13,7 @@ $ git clone https://nlvo.github.io/web-app-from-scratch-1920/
 npm install
 
 # Dev
-npm run dev
+npm run start:dev
 
 # Production
 npm start
@@ -84,7 +64,7 @@ For more information you can refer to the [Marvel API documentation](https://dev
 ![Interaction Diagram](https://user-images.githubusercontent.com/8554238/75497870-dc705480-59c5-11ea-8bd3-099a5912ae45.png)
 
 ## ToDo
-Things/features I would like to add
+Things/features I would like to add. For more info see [project marvel](https://github.com/nlvo/progressive-web-apps-1920/projects/1)
 - [x] browse
     - [x] comics
     - [x] characters
@@ -93,16 +73,26 @@ Things/features I would like to add
 - [x] search
     - [x] overview 
     - [ ] clientside
-  - [x] comics 
-    - [x] overview
-    - [x] detail
-  - [x] characters 
-    - [x] overview
-    - [x] detail
+- [x] comics 
+  - [x] overview
+    - [x] serverside
+    - [x] clientside
+  - [x] detail
+- [x] characters 
+  - [x] overview
+  - [x] detail
 - [ ] filter
 
 ## Shoutout
 Declan example for build with script.
+
+## Sources
+[Ionicicons](http://ionicons.com/)
+[Captain america shield](https://commons.wikimedia.org/wiki/File:Captain_America_Shield.svg)
+[Avengers logo](https://seeklogo.com/vector-logo/199629/the-avengers)
+
+## Feedback
+Things for the latest feedback are located in my [wiki](https://github.com/nlvo/progressive-web-apps-1920/wiki/Week-2---Progressive-Web-App-%F0%9F%9A%80%7C-Feedback).
 
 ### License
 Copyright © 2020, [Lien Vo](https://github.com/nlvo) . Released under the [MIT license](https://github.com/nlvo/web-app-from-scratch-1920/blob/master/LICENSE). Data provided by Marvel. © 2020 Marvel.
