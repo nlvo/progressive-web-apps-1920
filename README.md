@@ -94,6 +94,9 @@ Declan example for build with script.
 ## Feedback
 Things for the latest feedback are located in my [wiki](https://github.com/nlvo/progressive-web-apps-1920/wiki/Week-2---Progressive-Web-App-%F0%9F%9A%80%7C-Feedback).
 
+## Conclusion
+Things I've learned and made are located in my [wiki](https://github.com/nlvo/progressive-web-apps-1920/wiki/Performance)
+
 ### License
 Copyright © 2020, [Lien Vo](https://github.com/nlvo) . Released under the [MIT license](https://github.com/nlvo/web-app-from-scratch-1920/blob/master/LICENSE). Data provided by Marvel. © 2020 Marvel.
 
