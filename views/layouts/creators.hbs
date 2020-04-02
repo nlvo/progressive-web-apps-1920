@@ -1,0 +1,26 @@
+{{#if creators }}
+    <section class="creators">
+        <h1>{{ creatorsPageTitle }}</h1>
+        {{#each creators as |creator|}}
+            {{#> creator}}
+                <article>
+                    <img src="{{ creator.thumbnail }}" alt="{{creator.title}} Cover Image">
+                    <a href="/creators/{{creator.id }}">
+                        <h2>{{creator.title}}</h2>
+                    </a>
+                </article>
+            {{/creator}}
+        {{/each}}
+    </section>
+{{/if}}
+
+{{#if creator}}
+    <section class="creator">
+        <header>
+            <img src="{{ creator.thumbnail }}"  alt="Image from the {{ creator.title }} creator.">
+            <div>
+                <h1>{{ creator.fullName }}</h1>
+            </div>
+        </header>
+    </section>
+{{/if}}

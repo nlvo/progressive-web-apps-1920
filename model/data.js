@@ -10,7 +10,7 @@ function clean (oldData) {
 		const thumbnail = data.thumbnail.path.includes('image_not_available') ? '/img/not-found' : `${data.thumbnail.path}/portrait_fantastic`;
 		return {
 			id: data.id,
-			title: data.name || data.title,
+			title: data.name || data.title || data.fullName,
 			thumbnail: `${thumbnail}.${data.thumbnail.extension}`,
 			comicsAvailable: data.comics ? data.comics.available : data.description,
 			creators,

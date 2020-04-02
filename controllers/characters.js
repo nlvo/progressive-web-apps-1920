@@ -1,26 +1,21 @@
-const fetch = require('./data');
-const endpoint = require('./endpoint.js');
+const characters = require('../model/characters');
 
-// create the all characters endpoint
-function createCharactersEndpoint () {
-	const charactersEndpoint = endpoint('characters', 'orderBy=-modified&limit=8');
-	return charactersEndpoint;
-}
-
-// get all the comics and return the data
-async function getAll () {
-	const charactersEndpoint = createCharactersEndpoint();
-	const characters = await fetch(charactersEndpoint);
-	return characters;
+// render character detail if data is available
+async function showOne (req, res) {
+	const id = req.params.id;
+	const character = await characters.getOne(id);
+	res.render('main', {
+		character,
+	});
 }
 
 // render all the characters when the data is available
 async function showAll (req, res) {
-	const characters = await getAll();
-	res.render('main', { characters, charactersPageTitle: 'All characters' });
+	const allCharacters = await characters.getAll();
+	res.render('main', { characters: allCharacters, charactersPageTitle: 'All characters' });
 }
 
 module.exports = {
-	getAll,
 	showAll,
+	showOne,
 };

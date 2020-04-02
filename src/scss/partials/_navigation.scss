@@ -168,8 +168,17 @@
 	}
 	.categories {
 		li {
+			&:nth-of-type(3) {
+				display: flex;
+			}
+			&:nth-of-type(4) {
+				display: flex;
+			}
 			&:nth-of-type(6) {
 				display: flex;
+			}
+			&:last-of-type {
+				display: none;
 			}
 		}	
 	}
