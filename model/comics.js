@@ -53,13 +53,10 @@ async function getEight () {
 }
 
 // get 8 more comics and return when available
-async function getMore (req, res) {
-	const comicsEndpoint = createComicsEndpoint(req.query.id);
+async function getMore (id) {
+	const comicsEndpoint = createComicsEndpoint(id);
 	const comics = await fetch(comicsEndpoint);
-	res.render('more', {
-		layout: false,
-		comics,
-	});
+	return comics;
 }
 
 module.exports = {

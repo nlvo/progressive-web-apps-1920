@@ -17,7 +17,18 @@ async function showAll (req, res) {
 	});
 }
 
+// render comics when data is available
+async function showMore (req, res) {
+	const id = req.query.id;
+	const allComics = await comics.getMore(id);
+	res.render('more', {
+		layout: false,
+		comics: allComics,
+	});
+}
+
 module.exports = {
 	showAll,
 	showOne,
+	showMore,
 };

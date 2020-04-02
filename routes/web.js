@@ -21,7 +21,7 @@ app
 
 	.get('/search', search)
 	.get('/offline', offline)
-	// .get('/comics/page', comics.getMore)
+	.get('/comics/page', comics.showMore)
 
 	.get('/comics/:id', comics.showOne)
 	.get('/characters/:id', characters.showOne)
