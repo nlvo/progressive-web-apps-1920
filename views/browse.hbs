@@ -1,0 +1,54 @@
+<section class="comics">
+    <header>
+        <h1>{{ comicsPageTitle }}</h1>
+    </header>
+    {{#each comics as |comic|}}
+        {{#> comic}}
+            <article>
+                <img src="{{ comic.thumbnail }}" alt="{{comic.title}} Cover Image">
+                <a href="/comics/{{comic.id }}">
+                    <h2>{{comic.title}}</h2>
+                </a>
+            </article>
+        {{/comic}}
+    {{/each}}
+    <footer>
+        <a href="/comics">see more comics</a>
+    </footer>
+</section>
+<section class="series">
+    <header>
+        <h1>{{ seriesPageTitle }}</h1>
+    </header>
+    {{#each series as |serie|}}
+        {{#> serie}}
+            <article>
+                <img src="{{ serie.thumbnail }}" alt="{{serie.title}} Cover Image">
+                <a href="/series/{{serie.id }}">
+                    <h2>{{serie.title}}</h2>
+                </a>
+            </article>
+        {{/serie}}
+    {{/each}}
+    <footer>
+        <a href="/series">see more series</a>
+    </footer>
+</section>
+<section class="events">
+    <header>
+        <h1>{{ eventsPageTitle }}</h1>
+    </header>
+    {{#each events as |event|}}
+        {{#> event}}
+            <article>
+                <img src="{{ event.thumbnail }}" alt="{{event.title}} Cover Image">
+                <a href="/events/{{event.id }}">
+                    <h2>{{event.title}}</h2>
+                </a>
+            </article>
+        {{/event}}
+    {{/each}}
+    <footer>
+        <a href="/events">see more events</a>
+    </footer>
+</section>

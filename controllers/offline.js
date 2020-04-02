@@ -1,5 +1,5 @@
 function offline (req, res) {
-	res.render('main', { message: 'connection lost..' });
+	res.render('offline', { message: 'connection lost..' });
 }
 
 module.exports = offline;

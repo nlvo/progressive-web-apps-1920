@@ -1,26 +1,29 @@
-{{#if comics }}
-    <section class="comics">
+<section class="comics">
+    <header>
         <h1>{{ comicsPageTitle }}</h1>
-        {{#each comics as |comic|}}
-            {{#> comic}}
-                <article>
-                    <img src="{{ comic.thumbnail }}" alt="{{comic.title}} Cover Image">
-                    <a href="/comics/{{comic.id }}">
-                        <h2>{{comic.title}}</h2>
-                    </a>
-                </article>
-            {{/comic}}
-        {{/each}}
-    </section>
-    <a href="/" class="btn more">more comics</a>
-{{/if}}
+    </header>
+    {{#each comics as |comic|}}
+        {{#> comic}}
+            <article>
+                <img src="{{ comic.thumbnail }}" alt="{{comic.title}} Cover Image">
+                <a href="/comics/{{comic.id }}">
+                    <h2>{{comic.title}}</h2>
+                </a>
+            </article>
+        {{/comic}}
+    {{/each}}
+    <footer>
+        <a href="/comics" class="btn more">more comics</a>
+    </footer>
+</section>
+
 
 {{#if comic}}
     <section class="comic">
         <header>
             <img src="{{comic.thumbnail}}" alt="Image from the {{ comic.title }} cover.">
             <div>
-                <h1>{{comic.title }}</h1>
+                <h1>{{comic.title}}</h1>
                 <ul>
                     <h2>Creators</h2>
                     {{#each comic.creators as |creator|}}

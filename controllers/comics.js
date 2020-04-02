@@ -5,13 +5,13 @@ async function showOne (req, res) {
 	const id = req.params.id;
 	const comic = await comics.getOne(id);
 	const comicCharacters = await comics.getCharacters(id);
-	res.render('main', { comic, comicCharacters });
+	res.render('comics', { comic, comicCharacters });
 }
 
 // render comics when data is available
 async function showAll (req, res) {
 	const allComics = await comics.getEight();
-	res.render('main', {
+	res.render('comics', {
 		comics: allComics,
 		comicsPageTitle: 'All comics',
 	});

@@ -10,8 +10,7 @@ const port = process.env.PORT;
 app
 	.engine('hbs', exphbs({
 		extname: 'hbs',
-		layoutsDir: 'views',
-		partialsDir: 'views',
+		defaultLayout: 'main',
 	}))
 	.set('view engine', 'hbs')
 	.set('views', path.join(__dirname, 'views'))

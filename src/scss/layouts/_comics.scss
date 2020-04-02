@@ -2,9 +2,18 @@
  *	comics | overview
  * ----------------------------------------------- */
 
- .comics article img:hover {
-	transform: scale(1.1);
-	box-shadow: 0 4px 80px 9px rgba(0, 0, 0, .15), 0 2px 16px 11px rgba(0, 0, 0, .2);
+ .comics {
+	article img:hover {
+		transform: scale(1.1);
+		box-shadow: 0 4px 80px 9px rgba(0, 0, 0, .15), 0 2px 16px 11px rgba(0, 0, 0, .2);
+	}
+	footer {
+		border-top: 1px solid $grey-200;
+		display: inline-flex;
+    	justify-content: center;
+		padding: .625em;
+		width: 100%;
+	}
 }
 
 .comics.loader:empty::after {

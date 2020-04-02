@@ -4,7 +4,7 @@ const characters = require('../model/characters');
 async function showOne (req, res) {
 	const id = req.params.id;
 	const character = await characters.getOne(id);
-	res.render('main', {
+	res.render('characters', {
 		character,
 	});
 }
@@ -12,7 +12,7 @@ async function showOne (req, res) {
 // render all the characters when the data is available
 async function showAll (req, res) {
 	const allCharacters = await characters.getAll();
-	res.render('main', { characters: allCharacters, charactersPageTitle: 'All characters' });
+	res.render('characters', { characters: allCharacters, charactersPageTitle: 'All characters' });
 }
 
 module.exports = {

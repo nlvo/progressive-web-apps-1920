@@ -1,5 +1,5 @@
 const moreComics = document.querySelector('.more');
-const section = document.querySelector('.comics');
+const section = document.querySelector('.comics footer');
 let pages = 0;
 
 function nextPage () {
@@ -14,11 +14,13 @@ function nextPage () {
 
 async function showComics (event) {
 	event.preventDefault();
-	const baseUrl = location.pathname;
+	const baseUrl = location;
 	const currentPage = nextPage();
 	const response = await fetch(`${baseUrl}/page?id=${currentPage}`);
 	const comicsText = await response.text();
-	section.insertAdjacentHTML('beforeend', comicsText);
+	section.insertAdjacentHTML('beforebegin', comicsText);
 }
 
-moreComics.addEventListener('click', showComics);
+if (moreComics) {
+	moreComics.addEventListener('click', showComics);
+}

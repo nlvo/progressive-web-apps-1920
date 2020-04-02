@@ -1,0 +1,24 @@
+<section class="series">
+    <h1>{{ seriesPageTitle }}</h1>
+    {{#each series as |serie|}}
+        {{#> serie}}
+            <article>
+                <img src="{{ serie.thumbnail }}" alt="{{serie.title}} Cover Image">
+                <a href="/series/{{serie.id }}">
+                    <h2>{{serie.title}}</h2>
+                </a>
+            </article>
+        {{/serie}}
+    {{/each}}
+</section>
+
+{{#if serie}}
+    <section class="serie">
+        <header>
+            <img src="{{ serie.thumbnail }}"  alt="Image from the {{ serie.title }} serie.">
+            <div>
+                <h1>{{ serie.title }}</h1>
+            </div>
+        </header>
+    </section>
+{{/if}}

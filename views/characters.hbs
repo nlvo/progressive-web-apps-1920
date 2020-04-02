@@ -1,7 +1,6 @@
- {{#if characters}}
- <section class="characters">
+<section class="characters">
     <h1>{{ charactersPageTitle }}</h1>
-     {{#each characters as |character|}}
+    {{#each characters as |character|}}
         {{#> character}}
         <article>
             <img src="{{ character.thumbnail }}" alt="Image from the {{ character.title }} character.">
@@ -11,14 +10,14 @@
             <p>comics ({{character.comicsAvailable}})</p>
         </article>
         {{/character}}
-     {{/each}}
- </section>
-{{/if}}
+    {{/each}}
+</section>
+
 
 {{#if character}}
     <section class="character">
         <header>
-            <img src="{{ character.thumbnail }}"  alt="Image from the {{ character.title }} character.">
+            <img src="{{ character.thumbnail }}" alt="Image from the {{ character.title }} character.">
             <div>
                 <h1>{{ character.title }}</h1>
             </div>

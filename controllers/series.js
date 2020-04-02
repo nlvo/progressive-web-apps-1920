@@ -4,7 +4,7 @@ const series = require('../model/series');
 async function showOne (req, res) {
 	const id = req.params.id;
 	const serie = await series.getOne(id);
-	res.render('main', {
+	res.render('series', {
 		serie,
 	});
 }
@@ -12,7 +12,7 @@ async function showOne (req, res) {
 // render all the series when the data is available
 async function showAll (req, res) {
 	const allSeries = await series.getAll();
-	res.render('main', { series: allSeries, seriesPageTitle: 'All series' });
+	res.render('series', { series: allSeries, seriesPageTitle: 'All series' });
 }
 
 module.exports = {

@@ -1,15 +1,19 @@
-const comics = require('./comics');
-const characters = require('./characters');
+const comics = require('../model/comics');
+const series = require('../model/series');
+const events = require('../model/events');
 
 // render browse page when the data of all sections are available
 async function showBrowse (req, res) {
 	const comicsData = await comics.getEight();
-	const charactersData = await characters.getAll();
-	res.render('main', {
+	const allSeries = await series.getAll();
+	const allEvents = await events.getAll();
+	res.render('browse', {
 		comics: comicsData,
-		characters: charactersData,
-		comicsPageTitle: 'Newest release',
-		charactersPageTitle: 'Recent update',
+		series: allSeries,
+		events: allEvents,
+		comicsPageTitle: 'Newest comic release',
+		seriesPageTitle: 'Newest series release',
+		eventsPageTitle: 'Recent event update',
 	});
 }
 
