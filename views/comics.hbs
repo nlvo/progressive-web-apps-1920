@@ -1,22 +1,23 @@
-<section class="comics">
-    <header>
-        <h1>{{ comicsPageTitle }}</h1>
-    </header>
-    {{#each comics as |comic|}}
-        {{#> comic}}
-            <article>
-                <img src="{{ comic.thumbnail }}" alt="{{ comic.title }} Cover Image">
-                <a href="/comics/{{ comic.id }}">
-                    <h2>{{ comic.title }}</h2>
-                </a>
-            </article>
-        {{/comic}}
-    {{/each}}
-    <footer>
-        <a href="/comics/page/{{ pageNumber }}" class="btn btn--more">next page</a>
-    </footer>
-</section>
-
+{{#if comics}}
+    <section class="comics">
+        <header>
+            <h1>{{ comicsPageTitle }}</h1>
+        </header>
+        {{#each comics as |comic|}}
+            {{#> comic}}
+                <article>
+                    <img src="{{ comic.thumbnail }}" alt="{{ comic.title }} Cover Image">
+                    <a href="/comics/{{ comic.id }}">
+                        <h2>{{ comic.title }}</h2>
+                    </a>
+                </article>
+            {{/comic}}
+        {{/each}}
+        <footer>
+            <a href="/comics/page/{{ pageNumber }}" class="btn btn--more">next page</a>
+        </footer>
+    </section>
+{{/if}}
 
 {{#if comic}}
     <section class="comic">
