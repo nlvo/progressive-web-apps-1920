@@ -1,5 +1,5 @@
-const fetch = require("./data");
-const endpoint = require("./endpoint.js");
+const fetch = require('./data');
+const endpoint = require('./endpoint.js');
 
 // create endpoint based on user input
 function createSearchEndpoint (input) {
@@ -8,9 +8,10 @@ function createSearchEndpoint (input) {
 	return searchEndpoint;
 }
 
-function getAll () {
-	const searchResult = createSearchEndpoint;
-	return searchResult;
+async function getAll (searchInput) {
+	const searchEndpoint = createSearchEndpoint(searchInput);
+	const searchResults = await fetch(searchEndpoint);
+	return searchResults;
 }
 
 module.exports = getAll;
