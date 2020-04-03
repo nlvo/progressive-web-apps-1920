@@ -1,54 +1,46 @@
-<section class="comics">
+<h1 class="browse-title">Browse</h1>
+<section class="browse comics">
     <header>
-        <h1>{{ comicsPageTitle }}</h1>
+        <h2>{{ comicsPageTitle }}</h2>
     </header>
     {{#each comics as |comic|}}
         {{#> comic}}
             <article>
                 <img src="{{ comic.thumbnail }}" alt="{{comic.title}} Cover Image">
                 <a href="/comics/{{comic.id }}">
-                    <h2>{{comic.title}}</h2>
+                    <h3>{{comic.title}}</h3>
                 </a>
             </article>
         {{/comic}}
     {{/each}}
-    <footer>
-        <a href="/comics">see more comics</a>
-    </footer>
 </section>
-<section class="series">
+<section class="browse series">
     <header>
-        <h1>{{ seriesPageTitle }}</h1>
+        <h2>{{ seriesPageTitle }}</h2>
     </header>
     {{#each series as |serie|}}
         {{#> serie}}
             <article>
                 <img src="{{ serie.thumbnail }}" alt="{{serie.title}} Cover Image">
                 <a href="/series/{{serie.id }}">
-                    <h2>{{serie.title}}</h2>
+                    <h3>{{serie.title}}</h3>
                 </a>
             </article>
         {{/serie}}
     {{/each}}
-    <footer>
-        <a href="/series">see more series</a>
-    </footer>
 </section>
-<section class="events">
+<section class="browse events">
     <header>
-        <h1>{{ eventsPageTitle }}</h1>
+        <h2>{{ eventsPageTitle }}</h2>
     </header>
     {{#each events as |event|}}
         {{#> event}}
             <article>
                 <img src="{{ event.thumbnail }}" alt="{{event.title}} Cover Image">
                 <a href="/events/{{event.id }}">
-                    <h2>{{event.title}}</h2>
+                    <h3>{{event.title}}</h3>
                 </a>
             </article>
         {{/event}}
     {{/each}}
-    <footer>
-        <a href="/events">see more events</a>
-    </footer>
 </section>

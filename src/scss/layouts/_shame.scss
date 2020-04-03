@@ -14,20 +14,10 @@
 	width: 8em;
 }
 
-.container {
-	/* background-color: $grey-100; */
-	flex: 6;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	// overflow-x: scroll;
-}
-
 section {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	padding: 1em;
 	width: 100%;
 
 	article {
@@ -38,8 +28,7 @@ section {
 	}
 
 	header {
-		flex: 0 0 100%;
-
+		width: 100%;
 		span {
 			color: $grey-500;
 			margin-right: .625em;

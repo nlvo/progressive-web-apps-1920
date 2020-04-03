@@ -1,7 +1,15 @@
-@import 'character-detail';
 @import 'characters';
-@import 'comic-detail';
 @import 'comics';
+@import 'browse';
 @import 'search';
 @import 'offline';
 @import 'shame';
+
+.container {
+    padding: 1em;
+	flex: 6;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+    position: relative;
+}

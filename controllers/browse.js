@@ -4,11 +4,12 @@ const events = require('../model/events');
 
 // render browse page when the data of all sections are available
 async function showBrowse (req, res) {
-	const comicsData = await comics.getEight();
+	const pageNumber = 0;
+	const allComics = await comics.getMore(pageNumber);
 	const allSeries = await series.getAll();
 	const allEvents = await events.getAll();
 	res.render('browse', {
-		comics: comicsData,
+		comics: allComics,
 		series: allSeries,
 		events: allEvents,
 		comicsPageTitle: 'Newest comic release',
