@@ -15,6 +15,9 @@
 		bottom: 0;
 		z-index: -1;
 	}
+	h1 {
+		width: 100%;
+	}
 	article {
 		display: flex;
 		flex-direction: column;
@@ -62,6 +65,29 @@
 			position: absolute;
 			width: 100%;
 			z-index: -1;
+		}
+	}
+}
+
+.character {
+	header {
+		img {
+			flex: 1;
+		}
+		div {
+			padding: 1em;
+			flex: 2;
+		}
+	}
+	h2 {
+		width: 100%;
+	}
+	article {
+		p {
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;  
+			overflow: hidden;
 		}
 	}
 }

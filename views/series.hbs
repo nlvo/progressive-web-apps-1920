@@ -1,6 +1,8 @@
 {{#if series}}
     <section class="series">
-        <h1>{{ seriesPageTitle }}</h1>
+        <header>
+            <h1>{{ seriesPageTitle }}</h1>
+        </header>
         {{#each series as |serie|}}
             {{#> serie}}
                 <article>

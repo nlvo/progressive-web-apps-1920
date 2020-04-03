@@ -29,6 +29,7 @@ section {
 
 	header {
 		width: 100%;
+		margin: 0 .5em;
 		span {
 			color: $grey-500;
 			margin-right: .625em;
@@ -39,13 +40,10 @@ section {
 	h1 {
 		color: $grey-800;
 		font-size: 1.6em;
-		padding: 0 .7em;
-		width: 100%;
 	}
 
 	p {
 		color: $grey-500;
-		padding: 0 1em;
 		width: 100%;
 	}
 }
@@ -69,10 +67,6 @@ section {
 
 	&>h2 {
 		margin: 2em 1em 0;
-	}
-
-	ul {
-		margin: 0 2em;
 	}
 
 	div {
@@ -101,7 +95,6 @@ section article img {
 	}
 
 	.comic header img,
-	.character header img,
 	section article img {
 		width: 14em;
 	}

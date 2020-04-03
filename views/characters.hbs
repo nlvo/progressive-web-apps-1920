@@ -1,18 +1,21 @@
-<section class="characters">
-    <h1>{{ charactersPageTitle }}</h1>
-    {{#each characters as |character|}}
-        {{#> character}}
-        <article>
-            <img src="{{ character.thumbnail }}" alt="Image from the {{ character.title }} character.">
-            <a href="/characters/{{ character.id }}">
-                <h2>{{ character.title }}</h2>
-            </a>
-            <p>comics ({{character.comicsAvailable}})</p>
-        </article>
-        {{/character}}
-    {{/each}}
-</section>
-
+{{#if characters}}
+    <section class="characters">
+        <header>
+            <h1>{{ charactersPageTitle }}</h1>
+        </header>
+        {{#each characters as |character|}}
+            {{#> character}}
+            <article>
+                <img src="{{ character.thumbnail }}" alt="Image from the {{ character.title }} character.">
+                <a href="/characters/{{ character.id }}">
+                    <h2>{{ character.title }}</h2>
+                </a>
+                <p>comics ({{character.comicsAvailable}})</p>
+            </article>
+            {{/character}}
+        {{/each}}
+    </section>
+{{/if}}
 
 {{#if character}}
     <section class="character">
@@ -20,7 +23,21 @@
             <img src="{{ character.thumbnail }}" alt="Image from the {{ character.title }} character.">
             <div>
                 <h1>{{ character.title }}</h1>
+                <p>Description: {{ character.description }}</p>
             </div>
         </header>
+        <section>
+            <h2>Comics ({{ character.comicsAvailable }})</h2>
+            {{#each characterComics as |comic|}}
+                {{#> comic}}
+                    <article>
+                        <img src="{{ comic.thumbnail }}" alt="Image from the {{ comic.title }} comic.">
+                        <h3>{{ comic.title }}</h3>
+                        <p>{{ comic.description }}</p>
+                        <a href="/comics/{{ comic.id }}">read more</a>
+                    </article>
+                {{/comic}}
+            {{/each}}
+        </section>
     </section>
 {{/if}}

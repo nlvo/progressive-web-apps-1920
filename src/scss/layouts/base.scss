@@ -12,4 +12,10 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
     position: relative;
+    & > section {
+        header {
+            width: 100%;
+            margin: 0 1em;
+        }
+    }
 }

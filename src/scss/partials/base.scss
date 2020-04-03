@@ -12,6 +12,14 @@ body {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
+	& > header {
+		border: 1px solid #eeeff0;
+    	padding: .25em 1em;
+    	position: fixed;
+    	width: 100%;
+    	z-index: 2;
+    	background: $grey-000;
+	}
 }
 
 ul {
@@ -43,5 +51,20 @@ h2 {
 
 main {
 	display: flex;
-	height: 100%;
+	width: 100%;
+	top: 5em;
+	position: relative;
+}
+
+@media screen and (min-width: 64em) {
+	main {
+		align-self: flex-end;
+		width: calc(100vw - 30vw);
+	}
+}
+
+@media screen and (min-width: 80em) {
+	main {
+		width: calc(100vw - 20vw);
+	}
 }

@@ -55,7 +55,7 @@
 		}
 	}
 	footer {
-		color: $grey-500;
+		display: none;
 	}
 }
 
@@ -131,13 +131,32 @@
 
 
 @media screen and (min-width: 48em) {
+	.categories {
+		display: flex;
+		li {
+			&:nth-of-type(3) {
+				display: flex;
+			}
+			&:nth-of-type(6) {
+				display: flex;
+			}
+			&:last-of-type {
+				display: none;
+			}
+		}	
+	}
+}
+
+@media screen and (min-width: 64em) {
 	aside {
 		border-right: 1px solid $grey-100;
 		padding: 2em;
-		position: relative;
-		flex: 1;
+		position: fixed;
+		top: 5em;
+		z-index: 1;
+    	max-width: 24vw;
 		display: flex;
-    	flex-direction: column;
+		flex-direction: column;
 		nav {
 			border-top: 0;
 			box-shadow: none;
@@ -158,6 +177,10 @@
 				}
 			}
 		}
+		footer {
+			display: inline;
+			margin-top: auto;
+		}
 	}
 	.discover {
 		li {
@@ -167,19 +190,17 @@
 		}	
 	}
 	.categories {
+		display: initial;
 		li {
-			&:nth-of-type(3) {
-				display: flex;
-			}
 			&:nth-of-type(4) {
 				display: flex;
 			}
-			&:nth-of-type(6) {
-				display: flex;
-			}
-			&:last-of-type {
-				display: none;
-			}
 		}	
+	}
+}
+
+@media screen and (min-width: 80em) {
+    aside {
+		max-width: 16vw;
 	}
 }

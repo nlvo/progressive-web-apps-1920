@@ -29,7 +29,22 @@ async function getOne (id) {
 	// https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d
 }
 
+// create endpoint for the characters
+function createComicsEndpoint (id) {
+	const comicsEndpoint = endpoint(`characters/${id}/comics`, '');
+	return comicsEndpoint;
+}
+
+// get characters from the comics with req.params.id
+async function getComics (id) {
+	const comicsEndpoint = createComicsEndpoint(id);
+	const characterComics = await fetch(comicsEndpoint);
+	return characterComics;
+	// https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d
+}
+
 module.exports = {
 	getAll,
 	getOne,
+	getComics,
 };

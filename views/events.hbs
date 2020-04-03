@@ -1,6 +1,8 @@
 {{#if events}}
     <section class="events">
-        <h1>{{ eventsPageTitle }}</h1>
+        <header>
+            <h1>{{ eventsPageTitle }}</h1>
+        </header>
         {{#each events as |event|}}
             {{#> event}}
                 <article>

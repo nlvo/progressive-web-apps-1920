@@ -4,8 +4,11 @@ const characters = require('../model/characters');
 async function showOne (req, res) {
 	const id = req.params.id;
 	const character = await characters.getOne(id);
+	const characterComics = await characters.getComics(id);
+	console.log(characterComics)
 	res.render('characters', {
 		character,
+		characterComics,
 	});
 }
 

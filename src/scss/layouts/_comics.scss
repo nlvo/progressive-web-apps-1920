@@ -8,7 +8,6 @@
 		box-shadow: 0 4px 80px 9px rgba(0, 0, 0, .15), 0 2px 16px 11px rgba(0, 0, 0, .2);
 	}
 	footer {
-		border-top: 1px solid $grey-200;
 		display: inline-flex;
     	justify-content: center;
 		padding: .625em;
@@ -30,4 +29,20 @@
 
  .comic {
 	justify-content: left;
+	header {
+		div {
+			padding: 1em;
+			ul {
+				margin: 0 1em;
+			}
+		}
+	}
+	.comic_characters {
+		p {
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;  
+			overflow: hidden;
+		}
+	}
 }

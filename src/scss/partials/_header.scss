@@ -36,11 +36,6 @@ body {
 				display: none;
 			}
 		}
-
-		&:after {
-			content: '';
-			flex: 1;
-		}
 	}
 }
 
@@ -88,6 +83,7 @@ body {
 @media screen and (min-width: 48em) {
 
 	.navbar-top {
+		display: flex;
 		ul {
 			display: flex;
 
@@ -95,11 +91,6 @@ body {
 				form {
 					display: flex;
 				}
-			}
-
-			&:after {
-				content: '';
-				flex: 1;
 			}
 		}
 	}
@@ -143,6 +134,18 @@ body {
 
 			&:hover {
 				background-color: $marvel-700;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 64em) {
+	.navbar-top {
+		display: initial;
+		ul {
+			&:after {
+				content: '';
+				flex: 1;
 			}
 		}
 	}
