@@ -1,14 +1,6 @@
 const fetch = require('./data');
 const endpoint = require('./endpoint.js');
 
-// create new endpoint for 8 comics
-function createEightEndpoint () {
-	const offset = 0;
-	const limit = 8;
-	const comicsEndpoint = endpoint('comics', `dateDescriptor=thisMonth&orderBy=-onsaleDate&limit=${limit}&offset=${offset}`);
-	return comicsEndpoint;
-}
-
 // create new endpoint for all comics
 function createComicsEndpoint (pageNumber) {
 	const comics = 8;
@@ -45,13 +37,6 @@ async function getCharacters (id) {
 	// https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d
 }
 
-// get all eight comics and return when available
-async function getEight () {
-	const comicsEndpoint = createEightEndpoint();
-	const comics = await fetch(comicsEndpoint);
-	return comics;
-}
-
 // get 8 more comics and return when available
 async function getMore (id) {
 	const comicsEndpoint = createComicsEndpoint(id);
@@ -59,9 +44,31 @@ async function getMore (id) {
 	return comics;
 }
 
+// let pages = 0;
+
+function getPageNumber (number) {
+	let pages = Number(number);
+	const maxComics = 80;
+	const comics = 8;
+	const totalComics = pages * comics;
+	if (totalComics < maxComics) {
+		pages += 1;
+	}
+	return pages;
+}
+
+
+// get 8 more comics and return when available
+async function getNextPage (number) {
+	const comicsEndpoint = createComicsEndpoint(number);
+	const comics = await fetch(comicsEndpoint);
+	return comics;
+}
+
 module.exports = {
-	getEight,
 	getMore,
 	getOne,
 	getCharacters,
+	getNextPage,
+	getPageNumber,
 };

@@ -10,10 +10,12 @@ async function showOne (req, res) {
 
 // render comics when data is available
 async function showAll (req, res) {
-	const allComics = await comics.getEight();
+	const pageNumber = 0;
+	const allComics = await comics.getMore(pageNumber);
 	res.render('comics', {
 		comics: allComics,
 		comicsPageTitle: 'All comics',
+		pageNumber,
 	});
 }
 
@@ -27,8 +29,21 @@ async function showMore (req, res) {
 	});
 }
 
+// render comics when data is available
+async function showNext (req, res) {
+	const id = req.params.id;
+	const pageNumber = comics.getPageNumber(id);
+	const allComics = await comics.getNextPage(pageNumber);
+	res.render('comics', {
+		comicsPageTitle: 'All comics',
+		comics: allComics,
+		pageNumber,
+	});
+}
+
 module.exports = {
 	showAll,
 	showOne,
 	showMore,
+	showNext,
 };

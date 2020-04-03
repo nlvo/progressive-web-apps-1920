@@ -1,4 +1,4 @@
-const moreComics = document.querySelector('.more');
+const moreComics = document.querySelector('.btn--more');
 const section = document.querySelector('.comics footer');
 let pages = 0;
 
@@ -22,5 +22,6 @@ async function showComics (event) {
 }
 
 if (moreComics) {
+	moreComics.textContent = 'load more';
 	moreComics.addEventListener('click', showComics);
 }
