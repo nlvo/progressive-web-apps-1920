@@ -5,7 +5,7 @@ async function showSearchResults (req, res) {
 	const searchResults = await search(searchInput);
 	res.render('search', {
 		results: searchResults,
-		searchPageTitle: `'${req.query.search}' in Alle Comics`,
+		searchPageTitle: `'${req.query.search}' in All Comics`,
 		search: true,
 	});
 }
